@@ -1,0 +1,24 @@
+  # Groundwater Root Interaction Flag, Specify as 0, 1 , 2, 3, 4, 5 (default is 5)
+   #     This determines if there is groundwater uptake to meet crop demand and 
+   #     if the Potential Consumptive Use is reduced due to anoxia and soil stresses
+   # 
+   # 0 = No Transpiration            ==> Zeros out any T requirement
+   # 1 = No Groundwater Interaction  ==> No Root-Groundwater Uptake, No  Anoxia or Stress Reduction, Full CU must be met through surface sources (Precip or Irrigation)
+   # 2 = Has Anoxia/Soil Stress Loss,                      NO Root-Groundwater Uptake ==> CU Reduced from any anoxia and soil stress, but CU may only be satisfied with surface sources
+   # 3 = Has Root-Groundwater Uptake,                      NO Anoxia/Soil Stress Loss ==> Anoxia and Soil Stress losses are either added to Root-Groundwater Uptake or surface consumption requirement  (i.e. if there is root-groundwater uptake, then the amount lost through anoxia is consumed as root-groundwater uptake. However if there is no root-groundwater uptake then the anoxia is added to the surface sources consumption (Precip or Irrigation) 
+   # 4 = Has Root-Groundwater Uptake and Soil Stress Loss, NO Anoxia Loss             ==> Anoxia                 losses are either added to Root-Groundwater Uptake or surface consumption requirement  (i.e. if there is root-groundwater uptake, then the amount lost through anoxia is consumed as root-groundwater uptake. However if there is no root-groundwater uptake then the anoxia is added to the surface sources consumption (Precip or Irrigation) 
+   # 5 = Full Interaction  ==> HAS Anoxia/Soil Stress Reduction, HAS Root-Groundwater Uptake  (DEFAULT)  
+   1     5      Citrus and subtropical  
+   2     5   Deciduous fruits and nuts
+   3     5   Field crops
+   4     5   Grain and hay crops
+   5     1   Idle/fallow
+   6     3   NATIVE_VEGETATION_RIPARIAN
+   7     3   PASTURE
+   8     1   SEMIAGRICULTURAL (livestock
+   9     1   SEMIPAVED (Non-irrigated)
+   10    5   TRUCK__NURSERY_AND_BERRY_CR
+   11    1   TURF (Urban)
+   12    3   VINEYARD
+   13    5   WALNUTS
+   14    1	 WATER

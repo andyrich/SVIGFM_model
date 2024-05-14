@@ -1,0 +1,14 @@
+         1       1.220000        CITRUS_AND_SUBTROPICAL     #11. Crop-ID ROOT
+         2       0.9144          DECIDUOUS_FRUITS_AND_NUTS
+         3       1.213           FIELD_CROP
+         4       1.220           GRAIN_AND_HAY_CROPS
+         5       1.610           IDLE
+         6       3.960           NATIVE_VEGETATION_RIPARIAN
+         7       1.610           PASTURE
+         8       0.999           SEMIAGRICULTURAL(livestock feedlots, diaries, poultry farms)
+         9       0.001           SEMIPAVED
+        10       0.460           TRUCK__NURSERY_AND_BERRY_CROPS
+        11       0.610           TURF
+        12       1.00            VINEYARD
+        13       1.83            WALNUTS
+        14       1.1000          WATER

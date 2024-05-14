@@ -1,0 +1,8 @@
+ptf @
+layer,p,coarse_end,volcanic_end,mix_end
+1,@      p_lith_1        @,@      k_cors_1        @,@      k_volcs_1        @,@      k_mix_1        @
+2,@      p_lith_23        @,@      k_cors_23        @,@      k_volcs_23        @,@      k_mix_23        @
+3,@      p_lith_23        @,@      k_cors_23        @,@      k_volcs_23        @,@      k_mix_23        @
+4,@      p_lith_4        @,@      k_cors_4        @,@      k_volcs_4        @,@      k_mix_4        @
+5,@      p_lith_5        @,@      k_cors_5        @,@      k_volcs_5        @,@      k_mix_5        @
+6,@      p_lith_6        @,@      k_cors_6        @,@      k_volcs_6        @,@      k_mix_6        @

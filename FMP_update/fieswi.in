@@ -1,0 +1,14 @@
+1	0.7	#Citrus
+2	0.7	#Deciduous
+3	0.4	#Field
+4	0.4	#Grain
+5	0.9	#Idle/fallow
+6	0	#Native
+7	0.4	#Pasture
+8	0.5	#Semiagricultural
+9	0.99	#SEMIPAVED
+10	0.1	    #TRUCK__NURSERY_AND_BERRY_CROPS
+11	0.35	#TURF
+12	0.02	#VINEYARD
+13	0.04	#	WALNUTS
+14	0.99	#Water

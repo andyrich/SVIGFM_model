@@ -1,0 +1,22 @@
+   #
+   #
+   # ROOT_PRESSURE determines if, CONCEPT ONE, an empirical root pressure formulation is used (when specified)
+   #                       or if, CONCEPT TWO, a linear groundwater uptake/linear anoxia model is used (not specified, or all pressures are set to 0.0)
+   #
+   # If specified then SOIL block COEFFICIENT must be specified
+   # If all pressures are specified as 0.0, then the root pressure calculation is not made and the linear uptake model is used for that crop
+   #
+1         -0.15         -0.3         -6            -80                 Citrus and subtropical      #14. Crop-ID PSI(1) PSI(2) PSI(3) PSI(4)
+2         -0.13         -0.27        -6.94         -115                Deciduous fruits and nuts
+3         -0.15         -0.3         -30           -123.7              Field crops
+4         -0.15         -0.3         -52.1         -160.1              Grain and hay crops
+5          0.0           0.0         -8.25         -115                Idle/fallow
+6          0.5           0.0         -8.25         -115                NATIVE_VEGETATION_RIPARIAN
+7          0.0           0.0        -11.4         -80                  PASTURE
+8         -0.075        -0.2         -8.25         -115                SEMIAGRICULTURAL (livestock feedlots, diaries, poultry farms)
+9          0.0           0.0         -5.45         -80                 SEMIPAVED (Non-irrigated)
+10        -0.15         -0.3         -5.45         -80                 TRUCK__NURSERY_AND_BERRY_CROPS (VRC)
+11        -0.13         -0.28        -11.4         -80                 TURF (Urban)
+12        -0.15         -0.3         -7.25         -80                 VINEYARD
+13        -0.15	        -0.3	     -5.45	       -80                 WALNUTS
+14         0.5           0.1          -0.3          -0.4               WATER
