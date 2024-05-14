@@ -1269,7 +1269,7 @@ BEGIN SUPPLY_WELL
    #
    #  NO_QMAXRESET  (disables QMAXRESET)
    #
-   #  NOCIRNOQ
+     NOCIRNOQ
    #        Indicates wells will only provide groundwater 
    #        if the above surface demand is greater than zero 
    #        That is: Zero demand for surface model cell above
@@ -1296,7 +1296,7 @@ BEGIN SUPPLY_WELL
    #    ByWBS  indicates that NWBS Float numbers read read by ULOAD
    #    ByLayer indicates that NLAY  Float numbers read read by ULOAD
    #
-   #SMOOTH  ByThick constant 50
+   SMOOTH  ByThick constant 50
    #
    # When the demanded water is less than total supply (QMAX) PROTATE specifies how much each well pumps
    #    ByCapacity uses the ratio of the demand to the total well capacity                 --more Q for large   capacity wells
@@ -1528,7 +1528,7 @@ BEGIN LAND_USE
    #PRINT BYCROP        GENERIC_OUTPUT_OptKey  # Summarize output by each crop across entire model
    #PRINT BARE          GENERIC_OUTPUT_OptKey  # Summarize output by any bare soil/fallow crops in model
    #PRINT ALL           GENERIC_OUTPUT_OptKey  # Summarize output of of every crop by model cell --includes additional info, such as head and root elevation
-   PRINT ALL   .\Output\ALL_farm_details.txt # Summarize output by each crop across entire model
+   #PRINT ALL   .\Output\ALL_farm_details.txt # Summarize output by each crop across entire model
    #PRINT ALL_DETAIL    GENERIC_OUTPUT_OptKey  # Summarize output by of every crop by model cell --includes enormous amount of crop information from head to root pressures to crop fractions
    #PRINT INPUT         GENERIC_OUTPUT_OptKey  # Echo input loaded to file
    #
