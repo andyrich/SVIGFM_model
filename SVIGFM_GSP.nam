@@ -15,6 +15,7 @@ HFB6 26 sv_faults.hfb
 OC  22 sv_model_grid_6layers_GSP.oc
 NWT 19 sv_model_grid_6layers_BOYCE.nwt
 UZF 36 sv_zero_THTI_finf_GSP.uzf
+RCH 200 SVIGFM_GSP.rch
 #FMP 28 FMP.fmp4
 FMP 28 SV_FMP_V2.fmp
 HOB 2 SV_HOBS_11_18_2015.HOB

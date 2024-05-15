@@ -1269,7 +1269,7 @@ BEGIN SUPPLY_WELL
    #
    #  NO_QMAXRESET  (disables QMAXRESET)
    #
-     NOCIRNOQ
+     # NOCIRNOQ
    #        Indicates wells will only provide groundwater 
    #        if the above surface demand is greater than zero 
    #        That is: Zero demand for surface model cell above
@@ -1396,7 +1396,7 @@ BEGIN SUPPLY_WELL
    #{TIME FRAME, LINEFEED WBS, LINEFEED CAPACITY}
    TIME RANGE
    #OPEN/CLOSE DATA_FMP/WELLS.in
-   OPEN/CLOSE FMP_update/sv_owhm_wells.in
+   OPEN/CLOSE FMP_update\sv_owhm_wells_all_on_05142024.in
    #
    #  WELL_INPUT =>
    # 
@@ -1545,7 +1545,7 @@ BEGIN LAND_USE
    #    If not specified then names are auto-generated as CROP_ID, with "ID" being the Crop ID
    #    ULOAD reads LIST input with CHAR names to the right of the record ID (ID, CHAR).
    #CROP_NAME    ULOAD
-   CROP_NAME OPEN/CLOSE FMP_update/crop_names.in
+   CROP_NAME OPEN/CLOSE FMP_update\crop_names.in
    #
    # ------------------------------------------------------------------------------------------------------------------
    #
