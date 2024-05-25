@@ -1,4 +1,7 @@
-134
+137
+SS_1_mtn 1e-5
+VK_1_mtn 0.001
+HK_1_mtn .01
 hk_1_bay                          1.4708450E+00   bay
 hk_2_bay                          3.7471140E-01   bay
 hk_3_bay                          3.7471140E-01   bay
@@ -64,10 +67,10 @@ vk_5_sglen     	                   3.6216040E-01
 vk_6_sglen     	                   1.0000000E+00
 ghbk                                   1.4428350E-02
 rurfac                                 1.2000000E+00
-mtn_N                0.35
-mtn_SE               0.35
-mtn_SW               0.35
-mtn_WC               0.35
+mtn_N                0.
+mtn_SE               0.
+mtn_SW               0.
+mtn_WC               0.
 vk_4_wson               4.4339800E-01
 vk_4_cson               4.4339800E-01
 vk_5_wson               9.1202082E-02
