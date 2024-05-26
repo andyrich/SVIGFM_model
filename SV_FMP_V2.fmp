@@ -521,12 +521,12 @@ BEGIN GLOBAL DIMENSION
    #   NCROP     => No. of Land Use Types (CROPS)
    #   NSOIL     => No. of Soil Types
    #
-   NFARM     80
+   NFARM     139
    NCROP     14
    NSOIL     3
    NIRRIGATE 14
    NRD_TYPES 1
-   NSFR_RETURN 80
+   NSFR_RETURN 139
    NSFR_DELIV 17
    #
    #   NIRRIGATE  => No. of Irrigation Types (# of columns in EFFICIENCY) -- Set to zero if not specified
@@ -1208,7 +1208,7 @@ BEGIN SURFACE_WATER
    #          6     6     17        0          # WBS 6 includes all reaches from SEG 15, length prorates along with SEG 16, RCH 2
    #
    #SEMI_ROUTED_RETURN LAI[S,T,L-3]
-   SEMI_ROUTED_RETURN STATIC OPEN/CLOSE FMP_update/sv_sfr_diversion_return_points.in
+   SEMI_ROUTED_RETURN STATIC OPEN/CLOSE FMP_update/sv_sfr_diversion_return_points_new_farms.in
    #
    #
    # 3) FULLY ROUTED RETURN indicates that a WBS will search for any SFR reaches
