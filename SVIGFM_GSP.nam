@@ -14,7 +14,8 @@ MNW2 13 .\fmp_input\mnw_folder\sv_fmp_deepend_1_only_GSP.mnw2
 HFB6 26 sv_faults.hfb
 OC  22 sv_model_grid_6layers_GSP.oc
 NWT 19 sv_model_grid_6layers_BOYCE.nwt
-UZF 36 sv_zero_THTI_finf_GSP.uzf
+#UZF 36 sv_zero_THTI_finf_GSP.uzf
+drt 36 drt.drt
 RCH 200 SVIGFM_GSP.rch
 #FMP 28 FMP.fmp4
 FMP 28 SV_FMP_V2.fmp

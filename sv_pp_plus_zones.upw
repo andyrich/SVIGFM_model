@@ -1,11 +1,13 @@
 # MODFLOW-NWT UPW Package
- 50  -1.000000e+030 152 0			IUPWCB HDRY NPUPW IPHDRY Options
+ 50  -1.000000e+030 155 0			IUPWCB HDRY NPUPW IPHDRY Options
   1  0  0  0  0  0				LAYTYP(NLAY)
   0  0  0  0  0  0				LAYAVG(NLAY)
   1  1  1  1  1  1			CHANI (NLAY)  1 = horizontal anisotropy HANI is not read
  0 0 0 0 0 0		LAYVKA(NLAY) 0= no vertical anisotropy
  0 0 0 0 0 0		LAYWET (always zero for upw)
-SS_1_bay SS 1.0 1
+SS_1_mtn SS 1.0 1 ##
+2 none sv_zones 9
+SS_1_bay SS 1.0 1 ##
 1 none sv_zones 1
 SS_1_eside SS 1.0 1
 1 none sv_zones 2
@@ -21,7 +23,7 @@ SS_1_wson SS 1.0 1
 1 lay1ss sv_zones 7
 SS_1_city SS 1.0 1
 1 lay1ss sv_zones 8
-SS_2_bay SS 1.0 1
+SS_2_bay SS 1.0 1  
 2 none sv_zones 1
 SS_2_eside SS 1.0 1
 2 none sv_zones 2
@@ -101,7 +103,9 @@ SS_6_wson SS 1.0 1
 6 lay6ss sv_zones 7
 SS_6_city SS 1.0 1
 6 lay6ss sv_zones 8
-HK_1_bay HK 1.0 1
+HK_1_mtn HK 1.0 1  ##
+2 none sv_zones 9
+HK_1_bay HK 1.0 1  ##
 1 none sv_zones 1
 HK_1_eside HK 1.0 1
 1 none sv_zones 2
@@ -197,7 +201,9 @@ HK_6_wson HK 1.0 1
 6 lay6hk sv_zones 7
 HK_6_city HK 1.0 1
 6 none sv_zones 8
-VK_1_bay VK 1.0 1
+VK_1_mtn VK 1.0 1  ##
+2 none sv_zones 9
+VK_1_bay VK 1.0 1  ##
 1 none sv_zones 1
 VK_1_eside VK 1.0 1
 1 none sv_zones 2
