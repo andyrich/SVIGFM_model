@@ -6,7 +6,7 @@ BEGIN OPTIONS
 #            #
 #            # FASTFORWARD STR STP  #Only run model for Stress Period (or Date) STR to STP. Specifying STP is optional (otherwise its set ot NPER)
 #            #
-            #NOCBC
+            NOCBC
 #            #CBC_LAST_TIMESTEP      #Overrides OC and writes CBC at the end of every Time Step
 #            #CBC_EVERY_TIMESTEP     #Overrides OC and writes CBC every Time Step
 #            #
@@ -36,15 +36,15 @@ BEGIN OPTIONS
             MAXPARAM 2000 2000000 100000   # MAXPAR MAXCLUSTER MAXINSTANCE
 #            MAXBUDGET  MxBd      # Limits the size of the volumetric budgets, default is MxBd = 100. Should be at least the number of packages plus 10
 #            #
-#            BUDGETDB                        ./output/Budget.txt
-#            PROPPRINT                       ./output/              # Write auqifer properties to files.
+            BUDGETDB                        ./output/Budget.txt
+            PROPPRINT                       ./output/              # Write auqifer properties to files.
 #            #
 #            PRINT_TIME_INFO                 ./output/Time_Info.txt                     # Time step Date, Length, etc  information
 #            ITERATION_INFO                  ./output/Conv_Iter_Info.txt                     # Time step iteration and error information
-#            PRINT_CONVERGENCE         1   0 ./output/Conv_HCLOSE.txt   BUFFER 16 # NTERM OUTER_START  FILE
-#            PRINT_FLOW_RESIDUAL       1   0 ./output/Conv_RCLOSE.txt   BUFFER 16 # NTERM OUTER_START  FILE
+            PRINT_CONVERGENCE         1   0 ./output/Conv_HCLOSE.txt   BUFFER 16 # NTERM OUTER_START  FILE
+            PRINT_FLOW_RESIDUAL       1   0 ./output/Conv_RCLOSE.txt   BUFFER 16 # NTERM OUTER_START  FILE
 #            #
-#            CUMULATIVE_RESIDUAL_ERROR_ARRAY ./output/Cumulative_Model_Error.txt  #L^3 cumulative volume errors for model grid
+            CUMULATIVE_RESIDUAL_ERROR_ARRAY ./output/Cumulative_Model_Error.txt  #L^3 cumulative volume errors for model grid
 #            #
 #            # RESIDUAL_ERROR_ARRAY_THRESHOLD  INT              # Percent error threshold for printing rate error for model grid with RESIDUAL_ERROR_ARRAY
 #            # RESIDUAL_ERROR_ARRAY            Generic_Output   # L^3/T error for model grid for every time step that has percent error > RESIDUAL_ERROR_ARRAY_THRESHOLD 
@@ -52,7 +52,7 @@ BEGIN OPTIONS
 #            #
 #            #
 #            # HEAD_DISTANCE_ABOVE_GSE_LIMIT DstLim                 # Solver cannot allow any head to go above DstLim + GSE. For example, HdLim = 25 indictes that solver cannot allow the head to be 25 or more above the ground/land surface elevation
-#            # HEAD_DISTANCE_ABOVE_GSE_PRINT DstPrt  Generic_Output # Write to file any head cells that exceed DstPrt + GSE
+             HEAD_DISTANCE_ABOVE_GSE_PRINT 25  ./output/heads_above_GSE.txt # Write to file any head cells that exceed DstPrt + GSE
 #            #
 #            # Specify with List-Style NLAY shift values that are added to the STRT head arrays.
 #            #
