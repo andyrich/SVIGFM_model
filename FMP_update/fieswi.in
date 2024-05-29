@@ -1,8 +1,8 @@
-1	0.7	#Citrus
-2	0.7	#Deciduous
+1	0.5	#Citrus
+2	0.5	#Deciduous
 3	0.4	#Field
 4	0.4	#Grain
-5	0.9	#Idle/fallow
+5	0	#Idle/fallow
 6	0	#Native
 7	0.4	#Pasture
 8	0.5	#Semiagricultural

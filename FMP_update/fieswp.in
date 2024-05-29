@@ -1,14 +1,14 @@
-1	0.96	#	Citrus	and	subtropical	#13.	Crop-ID	(FIESWP		RUNOFF	Water
-2	0.96	#	Deciduous	fruits	and	nuts					
-3	0.96	#	Field	crops							
-4	8.80E-01	#	Grain	and	hay	crops					
+1	0.7	#	Citrus	and	subtropical	#13.	Crop-ID	(FIESWP		RUNOFF	Water
+2	0.7	#	Deciduous	fruits	and	nuts					
+3	0.7	#	Field	crops							
+4	0.7	#	Grain	and	hay	crops					
 5	0.7	#	Idle/fallow								
-6	8.60E-01	#	Native	classes							
-7	0.96	#	Pasture								
+6	0.7	#	Native	classes							
+7	0.7	#	Pasture								
 8	0.7	#	Semiagricultural	(livestock	feedlots,	diaries,	poultry	farms)			
-9	8.50E-01	#	SEMIPAVED								
-10	0.8	#	TRUCK__NURSERY_AND_BERRY_CROPS								
-11	0.99	#	TURF	(Urban)							
-12	9.44E-01	#	VINEYARD								
-13	0.95		#	WALNUTS								
-14	0.99	#	Water								
+9	.99	#	SEMIPAVED								
+10	0.7	#	TRUCK__NURSERY_AND_BERRY_CROPS								
+11	0.7	#	TURF	(Urban)							
+12	0.7	#	VINEYARD								
+13	0.7		#	WALNUTS								
+14	0.7	#	Water								
