@@ -578,7 +578,7 @@ BEGIN GLOBAL DIMENSION
    # OPTIONAL Keyword to indicate that FMP deep percolation 
    #                     is passed to UZF for delayed recharge
    #
-   UZF_LINK
+   # UZF_LINK
    #
    # --------------------------------------------------------------------------------------------------------------
    #
@@ -658,9 +658,9 @@ BEGIN OUTPUT
    ###GROUNDWATER_EVAPORATION              [GENERIC_OUTPUT_OptKey]    # WRITE EGWA.OUT
    ###GROUNDWATER_TRANSPIRATION            [GENERIC_OUTPUT_OptKey]    # WRITE TGWA.OUT
    ###GROUNDWATER_EVAPOTRANSPIRATION       [GENERIC_OUTPUT_OptKey]    # WRITE ETGW.OUT
-   IRRIGATION_EVAPORATION                .\output\EI.OUT
-   IRRIGATION_TRANSPIRATION              .\output\TI.OUT
-   IRRIGATION_EVAPOTRANSPIRATION         .\output\ETI.OUT
+   #IRRIGATION_EVAPORATION                .\output\EI.OUT
+   #IRRIGATION_TRANSPIRATION              .\output\TI.OUT
+   #IRRIGATION_EVAPOTRANSPIRATION         .\output\ETI.OUT
    ###PRECIPITATION_EVAPORATION            [GENERIC_OUTPUT_OptKey]    # WRITE EP.OUT
    ###PRECIPITATION_TRANSPIRATION          [GENERIC_OUTPUT_OptKey]    # WRITE TP.OUT
    ###PRECIPITATION_EVAPOTRANSPIRATION     [GENERIC_OUTPUT_OptKey]    # WRITE ETP.OUT
@@ -921,7 +921,7 @@ BEGIN SOIL
    # SURF_VK limits how much deep percolation can pass through the soil zone.
    #   If deep percolation (DPERC) exceeds SURF_VK, then DPERC - SURF_VK becomes rejected infiltration and becomes runoff.
    #
-   #SURFACE_VERTICAL_HYDRAULIC_CONDUCTIVITY LAI[S,A,L]
+   SURFACE_VERTICAL_HYDRAULIC_CONDUCTIVITY ARRAY OPEN/CLOSE .\model_arrays\uzf_vk_fmp.csv
    #
    # ------------------------------------------------------------------------------------------------------------------
    #
