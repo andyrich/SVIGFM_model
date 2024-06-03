@@ -25,9 +25,9 @@ hk_1_ken                          3.4400648E-03   ken
 hk_2_ken                          2.4483910E+00   ken
 hk_3_ken                          5.4264821E-04   ken
 hk_4_ken                          7.7346170E+01   ken
-ss_1_ken                          4.7212442E-07   ken
+ss_1_ken                          1.0000000E-06   ken
 ss_2_ken                          2.8357360E-05   ken
-ss_3_ken                          1.5133997E-07   ken
+ss_3_ken                          1.0000000E-06   ken
 ss_4_ken                          1.1882912E-06   ken
 sy_1_ken                          1.0598953E-02   ken
 vk_1_ken                          8.2598150E-01   ken
@@ -47,7 +47,7 @@ hk_4_nglen                            7.2347735E-02   nglen
 ss_1_nglen                            6.2510081E-05   nglen
 ss_2_nglen                            1.2438181E-04   nglen
 ss_3_nglen                            4.5348277E-05   nglen
-ss_4_nglen                            4.4372000E-07   nglen
+ss_4_nglen                            1.0000000E-06   ken   nglen
 sy_1_nglen                            1.0000000E-02   nglen
 vk_1_nglen                            4.3450569E-02   nglen
 vk_2_nglen                            2.4554491E-04   nglen
@@ -55,7 +55,7 @@ vk_3_nglen                            9.0077476E-04   nglen
 vk_4_nglen                            3.4272838E-02   nglen
 hk_5_nglen                            4.8164818E-02   nglen
 hk_6_nglen                            1.3500997E-02   nglen
-ss_5_nglen                            2.1433000E-07   nglen
+ss_5_nglen                            1.0000000E-06   ken   nglen
 ss_6_nglen                            1.3537600E-06   nglen
 vk_5_nglen                            1.3535326E-06   nglen
 vk_6_nglen                            5.2192992E-03   nglen
@@ -66,7 +66,7 @@ vk_4_sglen     	                   2.3125480E-01
 vk_5_sglen     	                   3.6216040E-01
 vk_6_sglen     	                   1.0000000E+00
 ghbk                                   1.4428350E-02
-rurfac                                 1.2000000E+00
+rurfac                                 1.0000000E+00
 mtn_N                0.
 mtn_SE               0.
 mtn_SW               0.
@@ -80,32 +80,32 @@ vk_6_cson               2.0294600E-01
 SS_1_cson       1.7271953E-06
 SS_1_wson       1.7271953E-06
 SS_1_sglen       1.7271953E-06
-SS_2_cson       7.0000000E-07
-SS_2_wson       7.0000000E-07
-SS_2_sglen       7.0000000E-07
-SS_3_cson       7.0000000E-07
-SS_3_wson       7.0000000E-07
-SS_3_sglen       7.0000000E-07
-SS_4_cson       9.3131553E-07
-SS_4_wson       9.3131553E-07
-SS_4_sglen       9.3131553E-07
+SS_2_cson       1.0000000E-06
+SS_2_wson       1.0000000E-06
+SS_2_sglen       1.0000000E-06
+SS_3_cson       1.0000000E-06
+SS_3_wson       1.0000000E-06
+SS_3_sglen       1.0000000E-06
+SS_4_cson      1.0000000E-06
+SS_4_wson       1.0000000E-06
+SS_4_sglen       1.0000000E-06
 SS_5_cson         1.0000000E-05
 SS_5_wson         1.0000000E-05
 SS_5_sglen         1.0000000E-05
 SS_6_cson         1.0000000E-05
 SS_6_wson         1.0000000E-05
 SS_6_sglen         1.0000000E-05
-SS_1_city          9.1099491E-07
+SS_1_city          1.0000000E-06
 SS_2_city           1.3848469E-06
 SS_3_city           6.8082075E-06
 SS_4_city          8.3227677E-07
-SS_5_city          7.0000000E-07
+SS_5_city          1.0000000E-06
 SS_6_city          7.6227898E-06
 SS_1_eside         9.1335112E-06
 SS_2_eside         1.1613069E-06
-SS_3_eside         7.0000000E-07
-SS_4_eside         8.7519787E-07
-SS_5_eside         9.6938149E-06
+SS_3_eside         1.0000000E-06
+SS_4_eside         1.0000000E-06
+SS_5_eside         1.0000000E-06
 SS_6_eside         9.7204054E-06
 sy_1_wson            1.5964513E-02
 sy_1_city            8.3071582E-02
