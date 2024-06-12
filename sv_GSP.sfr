@@ -1,36 +1,4 @@
-#	SFR no unsat, ICALC = 1, with tab files in TABFILE folder											
-TABFILE	15	0	REALTIME		[TABFILE NTAB FILEIO TIMEOPTION]							
-seg1	EXTERNAL	151										
-seg3	EXTERNAL	152										
-seg5	EXTERNAL	153										
-seg6	EXTERNAL	154										
-seg7	EXTERNAL	155										
-seg9	EXTERNAL	156										
-seg13	EXTERNAL	157										
-seg14	EXTERNAL	158										
-seg15	EXTERNAL	159										
-seg16	EXTERNAL	160										
-seg17	EXTERNAL	161										
-seg18	EXTERNAL	162										
-seg19	EXTERNAL	163										
-seg20	EXTERNAL	164										
-seg23	EXTERNAL	165										
-TABPRINT	15											
-1	seg1	      0.0  #7.9976970E-01										
-3	seg3	      0.0  #7.9976970E-01										
-5	seg5	      0.0  #7.9976970E-01										
-6	seg6	      0.0  #7.9976970E-01										
-7	seg7	      0.0  #7.9976970E-01										
-9	seg9	      0.0  #7.9976970E-01										
-13	seg13	      0.0  #7.9976970E-01										
-14	seg14	      0.0  #7.9976970E-01										
-15	seg15	      0.0  #7.9976970E-01										
-16	seg16	      0.0  #7.9976970E-01										
-17	seg17	      0.0  #7.9976970E-01										
-18	seg18	      0.0  #7.9976970E-01										
-19	seg19	      0.0  #7.9976970E-01										
-20	seg20	      0.0  #7.9976970E-01										
-23	seg23	      0.0  #7.9976970E-01										
+#	SFR no unsat, ICALC = 1, with tab files in TABFILE folder																	
 	-842	40	0	0	1.28E+05	1.00E-04	50	71	1			
 	1	128	60	1	1	578.868569	130.865448	0.005949	2	     4.5718312E-02		
 	1	129	60	1	2	302.625441	125.34475	0.005949	2	     4.5718312E-02		
