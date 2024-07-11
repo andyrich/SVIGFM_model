@@ -1,11 +1,11 @@
-LIST 7 .\output\sv_model_grid_6layers.lst
+#LIST 7 .\output\sv_model_grid_6layers.lst
 WARN 999 .\output\WARNING.txt
 BAS6  1 sv_init_heads.bas
 DIS  29 sv_model_grid_6layers_GSP.dis
 UPW 11 sv_pp_plus_zones.upw
 PVAL 20 sv_PVAL_rev_mtnfac.pval
 ZONE 21 sv_zones.zone
-MULT 23 sv_mult.MULT
+#MULT 23 sv_mult.MULT
 SFR 35 sv_GSP.sfr
 GAGE 38 sv_SFR_swgw_n_gauge_locs.gag
 WEL1 12 SV_GSP_rur2.wel
