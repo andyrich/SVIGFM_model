@@ -1,5 +1,5 @@
 # ZONE FILE Line 0: Text
 1            Line 1: NZN
 sv_zones     Line 2: ZONNAM
-OPEN/CLOSE .\model_arrays\ZONATION_3.csv 0 (FREE) -1 Line 3: IZON: OPEN/CLOSE FNAME CNSTNT FMTIN IPRN
+OPEN/CLOSE ./model_arrays/ZONATION_3.csv 0 (FREE) -1 Line 3: IZON: OPEN/CLOSE FNAME CNSTNT FMTIN IPRN
 
