@@ -543,7 +543,7 @@ BEGIN GLOBAL DIMENSION
    # SURFACE_ELEVATION is a 2D FLOAT ARRAY of land surface elevations
    #    --Note you do not have to specify this, if it is specified DIS package keyword as "SURFACE_ELEVATION ULOAD". Where the keyword "SURFACE_ELEVATION" IS ON THE LINE BEFORE SPECIFYING TOP.
    #
-   SURFACE_ELEVATION OPEN/CLOSE .\model_arrays\top1.txt
+   SURFACE_ELEVATION OPEN/CLOSE ./model_arrays/top1.txt
    #
    # --------------------------------------------------------------------------------------------------------------
    #
@@ -638,36 +638,36 @@ BEGIN OUTPUT
    # The following will either use a predefined name (specified at comment)
    #   or write file to GENERIC_OUTPUT location/name
    #
-   WBS_WATER_USE                        .\output\FMP_WBS_WATER_USE.txt
-   FARM_DEMAND_SUPPLY_SUMMARY           .\output\FDS.out
-   FARM_BUDGET                           .\output\FB_DETAILS.OUT   # WRITE FB_DETAILS.out
+   #WBS_WATER_USE                        ./output/FMP_WBS_WATER_USE.txt
+   #FARM_DEMAND_SUPPLY_SUMMARY           ./output/FDS.out
+   #FARM_BUDGET                           ./output/FB_DETAILS.OUT   # WRITE FB_DETAILS.out
    #FARM_BUDGET_COMPACT                  [GENERIC_OUTPUT_OptKey]    # WRITE FB_COMPACT.out
    #FARM_NET_RECHARGE_ARRAY              [GENERIC_OUTPUT_OptKey]    # WRITE FNRCH_ARRAY.out
    #FARM_NET_RECHARGE_LIST               [GENERIC_OUTPUT_OptKey]    # WRITE FNRCH_LIST.out
    #EVAPOTRANSPIRATION_SUMMARY SUM       [GENERIC_OUTPUT_OptKey]    # WRITE ET_ARRAY.out     --KEY MAY BE "ET_ARRAY SUM"
    #EVAPOTRANSPIRATION_SUMMARY SEPARATE  [GENERIC_OUTPUT_OptKey]    # WRITE E_n_T_ARRAY.out  --KEY MAY BE "ET_ARRAY SEPARATE"
- #  ET_LIST                              .\output\ET_LIST.out
- #  FARM_WELL_SUMMARY                    .\output\FWELLS.out
+ #  ET_LIST                              ./output/ET_LIST.out
+ #  FARM_WELL_SUMMARY                    ./output/FWELLS.out
    #
    # Output 2D Array for the following.
    # If COMPACT is present then writes only nonzero values along with their row and column
-  # LANDSCAPE_RUNOFF             		.\output\RUNOFF.OUT      # [GENERIC_OUTPUT_OptKey]    # WRITE RUNOFF.OUT
- #  DEEP_PERCOLATION    			 		.\output\DPERC.OUT #--WATER THAT IS SENT TO GROUNDWATER OR UZF
+  # LANDSCAPE_RUNOFF             		./output/RUNOFF.OUT      # [GENERIC_OUTPUT_OptKey]    # WRITE RUNOFF.OUT
+ #  DEEP_PERCOLATION    			 		./output/DPERC.OUT #--WATER THAT IS SENT TO GROUNDWATER OR UZF
    #
    # LANDSCAPE CELL BY CELL OUTPUTS --Currently not supported
    ###GROUNDWATER_EVAPORATION              [GENERIC_OUTPUT_OptKey]    # WRITE EGWA.OUT
    ###GROUNDWATER_TRANSPIRATION            [GENERIC_OUTPUT_OptKey]    # WRITE TGWA.OUT
    ###GROUNDWATER_EVAPOTRANSPIRATION       [GENERIC_OUTPUT_OptKey]    # WRITE ETGW.OUT
-   #IRRIGATION_EVAPORATION                .\output\EI.OUT
-   #IRRIGATION_TRANSPIRATION              .\output\TI.OUT
-   #IRRIGATION_EVAPOTRANSPIRATION         .\output\ETI.OUT
+   #IRRIGATION_EVAPORATION                ./output/EI.OUT
+   #IRRIGATION_TRANSPIRATION              ./output/TI.OUT
+   #IRRIGATION_EVAPOTRANSPIRATION         ./output/ETI.OUT
    ###PRECIPITATION_EVAPORATION            [GENERIC_OUTPUT_OptKey]    # WRITE EP.OUT
    ###PRECIPITATION_TRANSPIRATION          [GENERIC_OUTPUT_OptKey]    # WRITE TP.OUT
    ###PRECIPITATION_EVAPOTRANSPIRATION     [GENERIC_OUTPUT_OptKey]    # WRITE ETP.OUT
    #
    # WRITE ROUT.OUT FOR FIRST STRESS PERIOD (STATIC) OR 
    # FOR ALL STRESS PERIODS (TRANSIENT)
-   #ROUTING_INFORMATION TRANSIENT .\output\routing_info.out  [GENERIC_OUTPUT_OptKey]  
+   #ROUTING_INFORMATION TRANSIENT ./output/routing_info.out  [GENERIC_OUTPUT_OptKey]
 END
 #
 #
@@ -707,7 +707,7 @@ BEGIN WATER_BALANCE_SUBREGION   #WBS
    # READ 2D Array of INT that are from 0 to NWBS to indicate the spatial area and location of each WBS
    #
    #LOCATION  LAI[S,T,A]
-   LOCATION TRANSIENT OPEN/CLOSE fmp_driver\farms_driver.txt
+   LOCATION TRANSIENT OPEN/CLOSE ./fmp_driver/farms_driver.txt
    #
    # ------------------------------------------------------------------------------------------------------------------
    #
@@ -730,15 +730,15 @@ BEGIN WATER_BALANCE_SUBREGION   #WBS
    #
    #
    #EFFICIENCY    LAI[S,T,A,L-NIRRIGATE]
-   EFFICIENCY STATIC LIST OPEN/CLOSE FMP_update/sv_OFE_GSP.txt
+   EFFICIENCY STATIC LIST OPEN/CLOSE ./fmp_update/sv_OFE_GSP.txt
    #
    # When water supply does not meet demand the EFFICIENTY (OFE)
-   # can improve to 1.0 or remain the same. 
+   # can improve to 1.0 or remain the same.
    # EFFICIENCY_IMPROVEMENT is a 0 or 1 flag to indicate if efficiency improvement is allowed.
    #   0 - Efficiency remains the same, crop transpiration reduced due to supply shortfall
    #   1 - Efficiency improves until it reaches 1.0, then crop transpiration reduced
    #   If not specified then automatically set to 0, so OFE is held constant based on user input. That is "EFFICIENCY_IMPROVEMENT CONSTANT 0"
-   # 
+   #
    #EFFICIENCY_IMPROVEMENT    LAI[S,T,A,L-NIRRIGATE]
    EFFICIENCY_IMPROVEMENT STATIC CONSTANT 1
    #
@@ -749,15 +749,15 @@ BEGIN WATER_BALANCE_SUBREGION   #WBS
    #   1 - Irrigated Crop CU reduced to water supply, if water supply shortfall.                          --Deficit Irrigation
    #   If not specified then automatically set to 1, Deficit Irrigation
    #      That is the default is "DEFICIENCY_SCENARIO CONSTANT 1"
-   # 
+   #
    #DEFICIENCY_SCENARIO LAI[S,T,L]
    DEFICIENCY_SCENARIO STATIC CONSTANT 1
    #
-   # If a WBS does not have enough supply to meet its demand, 
+   # If a WBS does not have enough supply to meet its demand,
    #    PRORATE_DEFICIENCY specifies how the available water supply is distributed
    #
    # ByDEMAND  - Prorate by ratio of each crops demand by total demand (recommended)
-   # ByAVERAGE - Prorate by crops being ABOVE or BELOW average demand flux. 
+   # ByAVERAGE - Prorate by crops being ABOVE or BELOW average demand flux.
    #               BELOW is always met, ABOVE is evenly distributed. (original FMP concept)
    # If not specified then automatically set to "PRORATE_DEFICIENCY ByDEMAND"
    #
@@ -785,10 +785,10 @@ BEGIN WATER_BALANCE_SUBREGION   #WBS
    #
    # ------------------------------------------------------------------------------------------------------------------
    #
-   # If there are cells declared as FALLOW/BARE then this determines the 
+   # If there are cells declared as FALLOW/BARE then this determines the
    # fraction of runoff to infiltration for precipitation that falls on bare soil/fallow land.
    #    BARE cells result for model cells not defined by a land use/crop ID (CID < 1) or if the sum of crop fractions for a cell do not sum to 1.
-   # 
+   #
    # The fraction is set by WBS or by (ROW,COL).
    #   For example, if WBS 1 is set to 0.75; this indicates that 75% of precip that falls on bare soil in WBS 1 becomes surface runoff
    #
@@ -815,7 +815,7 @@ BEGIN WATER_BALANCE_SUBREGION   #WBS
    #
    # ------------------------------------------------------------------------------------------------------------------
    #
-   # If a WBS has specified an added irrigation demand, then defines the 
+   # If a WBS has specified an added irrigation demand, then defines the
    #    split between becoming surface runoff or deep percolation.
    #    This fraction is only is a split for the additional demanded water.
    #
@@ -827,12 +827,12 @@ BEGIN WATER_BALANCE_SUBREGION   #WBS
    #
    #ADDED_DEMAND_RUNOFF_SPLIT LAI[S,T,A,L-NIRRIGATE]
    #
-   # Specify an additional demand for each WBS that is applied to each crop. 
-   #          --Additional demand is demand added to the land use in addition 
+   # Specify an additional demand for each WBS that is applied to each crop.
+   #          --Additional demand is demand added to the land use in addition
    #            to its consumptive use value (additional irrigation requirement).
    #          --The crop must have an IRRIGATION flag >0 or the added demand cannot be applied.
    #
-   #   This only applies to irrigated crops and the additional 
+   #   This only applies to irrigated crops and the additional
    #   demanded water only becomes surface runoff or deep percolation
    #
    #   In can be specified as a length per time (LENGTH or FLUX) or volume per time (RATE). --Both maybe used at once.
@@ -851,7 +851,7 @@ BEGIN WATER_BALANCE_SUBREGION   #WBS
    #    It specifies the relationship between each SWO Unit (NUNIT), District (NDIST), and Project (NPROJ).
    #    To declare HIERARCHY, it is required to specify in the GLOBAL DIMENSION block: NPROJ, NDIST, NUNIT > 0
    #
-   #    List-Style Loads NWBS+NAUX_DEMAND records and 3 properties that designate the 
+   #    List-Style Loads NWBS+NAUX_DEMAND records and 3 properties that designate the
    #    the WBS/Aux_Demand's associated Unit, District, and Project, respectively (ie one record is WBS IUNIT IDIST IPROJ)
    #
    #HIERARCHY LAI[S,T,L-3]
@@ -864,19 +864,19 @@ BEGIN SOIL
    # Required Block if NSOIL > 0
    #
    # All List-Style input expects NSOIL records.
-   #                                 
+   #
    # If block is not specified, then CAPILLARY_FRINGE and COEFFICIENT are set to zero.
    #
    # ------------------------------------------------------------------------------------------------------------------
    #
-   # Specify soil capillary fringe depth. If specified with LIST, 
+   # Specify soil capillary fringe depth. If specified with LIST,
    #         then record ID is the location in SOIL_ID that the capillary fringe is applied too.
    #
    #   If specified as ARRAY, then the (ROW,COL) location defines the models capillary fringe and SOIL_ID is not used.
    #
    #CAPILLARY_FRINGE LAI[S,A,L]
-   CAPILLARY_FRINGE STATIC LIST OPEN/CLOSE FMP_update/cap_fringe.in
-   # 
+   CAPILLARY_FRINGE STATIC LIST OPEN/CLOSE  ./fmp_update/cap_fringe.in
+   #
    # ------------------------------------------------------------------------------------------------------------------
    #
    # SOIL_ID is required when NSOIL > 1 to specify the location of the NSOILs.
@@ -885,13 +885,13 @@ BEGIN SOIL
    #   The location of each ID are used for the remaining properties if they use LIST input (that is if CAPILLARY_FRINGE is specified by .
    #
    #SOIL_ID  ULOAD
-   SOIL_ID  STATIC OPEN/CLOSE fmp_input\model_arrays\soils_redo_with_all_active_as_nonzero.dat
+   SOIL_ID  STATIC OPEN/CLOSE ./fmp_input/model_arrays/soils_redo_with_all_active_as_nonzero.dat
    #
    # ------------------------------------------------------------------------------------------------------------------
    #
    # COEFFICIENT is only required if you specify "ROOT_PRESSURE" in the LAND_USE Block
    #
-   # It is used to determine the water pressure on a crop root and 
+   # It is used to determine the water pressure on a crop root and
    # the root pressures determine its groundwater uptake and soil stress
    #
    # If not specified then the groundwater uptake and anoxia follows a linear model as described in Appendix 4 and 5
@@ -911,7 +911,7 @@ BEGIN SOIL
    #          3  SANDYLOAM
    #
    #COEFFICIENT  ULOAD
-   COEFICIENT STATIC LIST OPEN/CLOSE FMP_update/SOILLIST.in
+   COEFICIENT STATIC LIST OPEN/CLOSE ./fmp_update/SOILLIST.in
    #
    # ------------------------------------------------------------------------------------------------------------------
    #
@@ -921,24 +921,24 @@ BEGIN SOIL
    # SURF_VK limits how much deep percolation can pass through the soil zone.
    #   If deep percolation (DPERC) exceeds SURF_VK, then DPERC - SURF_VK becomes rejected infiltration and becomes runoff.
    #
-   SURFACE_VERTICAL_HYDRAULIC_CONDUCTIVITY ARRAY OPEN/CLOSE .\pp2024_out\fmp_vk.txt
+   SURFACE_VERTICAL_HYDRAULIC_CONDUCTIVITY ARRAY OPEN/CLOSE ./pp2024_out/fmp_vk.txt
    #
    # ------------------------------------------------------------------------------------------------------------------
    #
    # Optional keyword that allows tying soil type to potential consumption of precipitation
    #
-   # This limits how much precipitation can be consumed as evaporation and transpiration 
-   #    based on the quantity of rainfall and is analogous to specifying an 
+   # This limits how much precipitation can be consumed as evaporation and transpiration
+   #    based on the quantity of rainfall and is analogous to specifying an
    #    effective precipitation, which represents the quantity of rainfall that is not runoff nor deep percolation
    #
-   # ULOAD List-Style input reads NSOIL LookUp Tables 
+   # ULOAD List-Style input reads NSOIL LookUp Tables
    #   For a full description of LookUp Table input with ULOAD see Appendix 6
    #
    # Each LookUp table specifies in the first column a precipitation rate (L/T) and the second column is
-   #     BY_LENGTH    indicates the second column represents a L/T upper limit of consumption. 
+   #     BY_LENGTH    indicates the second column represents a L/T upper limit of consumption.
    #                     That is the effective precipitation for the given precipitation
-   #     BY_FRACTION  indicates the second column represents a fraction 
-   #                     from 0 to 1 of the precipitation that is available for consumption. 
+   #     BY_FRACTION  indicates the second column represents a fraction
+   #                     from 0 to 1 of the precipitation that is available for consumption.
    #                     That is the the fraction times precipitation is the effective precipitation.
    #
    # Precipitation that is not available for consumption becomes either runoff or deep percolation
@@ -961,23 +961,23 @@ BEGIN CLIMATE
    #
    #
    # Precipitation that falls on model domain (L/T)
-   #   ***Only the precip that falls land defined with a nonzero WBS (FARM) ID is simulated, 
+   #   ***Only the precip that falls land defined with a nonzero WBS (FARM) ID is simulated,
    #      any zero WBS ID cells have precip set to zero
    #
    #PRECIPITATION  LAI[S,T,A]
-   PRECIPITATION TRANSIENT OPEN/CLOSE fmp_driver\precip_driver.txt
+   PRECIPITATION TRANSIENT OPEN/CLOSE ./fmp_driver/precip_driver.txt
    #
    # ------------------------------------------------------------------------------------------------------------------
    #
    #
    # Reference ET (L/T)
    #      If not specified, then REFERENCE_ET is set to 0.0
-   #   ***This is required there are fallow/bare soil cells, 
-   #                    Crop Coefficients (Kc) specified, or 
+   #   ***This is required there are fallow/bare soil cells,
+   #                    Crop Coefficients (Kc) specified, or
    #                    Crops specified as FRACTIONS (multiple crops per model cell)
    #
    #REFERENCE_ET   LAI[S,T,A]
-   REFERENCE_ET TRANSIENT OPEN/CLOSE fmp_driver\pet_driver.txt
+   REFERENCE_ET TRANSIENT OPEN/CLOSE ./fmp_driver/pet_driver.txt
    #
    # ------------------------------------------------------------------------------------------------------------------
    #
@@ -990,7 +990,7 @@ BEGIN CLIMATE
    #
    # If POTENTIAL_EVAPORATION_BARE is not specified, then Fallow/Bare soil automatically uses
    # 0.5*ETref to obtain a potential evaporation rate for bare soil.
-   # 
+   #
    # The following keyword overrides the default value of 0.5 with the value read at FLOAT
    #
    #REFERENCE_ET_TO_BARE FLOAT
@@ -1012,14 +1012,14 @@ BEGIN CLIMATE
    #
    # Optional keyword that specifies by the model grid potential consumption of precipitation
    #
-   # This limits how much precipitation can be consumed as evaporation and transpiration 
-   #    based on the quantity of rainfall and is analogous to specifying an 
+   # This limits how much precipitation can be consumed as evaporation and transpiration
+   #    based on the quantity of rainfall and is analogous to specifying an
    #    effective precipitation, which represents the quantity of rainfall that is not runoff nor deep percolation
    #
    # This is a spatial based input equivalent to the SOIL block's keyword EFFECTIVE_PRECIPITATION_TABLE
    #
    #     BY_LENGTH    indicates the array specifies the effective precipitation (L/T) as an upper limit of consumption.
-   #     BY_FRACTION  indicates the array is a 0 to 1 fraction of the precipitation that is available for consumption. 
+   #     BY_FRACTION  indicates the array is a 0 to 1 fraction of the precipitation that is available for consumption.
    #                     That is the the fraction times precipitation is the effective precipitation.
    #
    # Precipitation that is not available for consumption becomes either runoff or deep percolation
@@ -1031,7 +1031,7 @@ END CLIMATE
 #
 #
 BEGIN SURFACE_WATER
-   # 
+   #
    # ALL KEYWORDS ARE OPTIONAL
    #
    # ------------------------------------------------------------------------------------------------------------------
@@ -1046,22 +1046,22 @@ BEGIN SURFACE_WATER
    #         = 0 indicates only the water necessary is obtained, excess is not delivered
    #         = 1 indicates that unused delivered water is evenly discharged to SFR Delivery locations defined with SEMI_ROUTED_DELIVERY. If SEMI_ROUTED_DELIVERY is not defined, then functions the same as NRDU = 0
    #         = 2 indicates that unused delivered water is evenly injected to a WBS associated supply wells
-   #        >=10 indicates that unused delivered water is evenly infiltrated as deep percolation to the locations within NRD_INFILTRATION_LOCATION that have the same integer 
+   #        >=10 indicates that unused delivered water is evenly infiltrated as deep percolation to the locations within NRD_INFILTRATION_LOCATION that have the same integer
    #
    #
    # It maybe specified as VOLUME of water per stress period.
    # The keywords RATE and VOLUME are optional and if not specified, then VOLUME is the default.
    #
    # Or as a RATE of water available in model units L^3/T
-   # Model has non-routed deliveries (NRD);  NRD_TYPES = NUMBER OF NRDs; 
+   # Model has non-routed deliveries (NRD);  NRD_TYPES = NUMBER OF NRDs;
    #    specified as [WBS_ID, NRD_TYPES*(NRDV NRDR NRDU)];   (NRDV NRDR NRDU) = (Volume Rank UseType)
    #
-   #   
+   #
    #
    #    *** NON_ROUTED_DELIVERY is only allowed if in the GLOBAL DIMENSION Block has NRD_TYPES>0 ***
    #
    #NON_ROUTED_DELIVERY [{RATE, VOLUME}] LAI[S,T,L-(3*NRD_TYPES)]
-   NON_ROUTED_DELIVERY TRANSIENT LIST DATAFILE FMP_update/update_svwwtp_only.txt
+   NON_ROUTED_DELIVERY TRANSIENT LIST DATAFILE ./fmp_update/update_svwwtp_only.txt
    #
    #
    #NRD_INFILTRATION_LOCATION LAI[S,T,A]
@@ -1072,11 +1072,11 @@ BEGIN SURFACE_WATER
    #    The following keywords result in an output file that contains information about
    #    either the semi-routed delivery amounts or runoff that returns to SFR
    #
-   PRINT SFR_DELIVERY          .\output\SFR_DELIVERY.out  # Budgets pertaining to water delivered via SFR; specified by NSFR_DELIV
-   PRINT SFR_DELIVERY_BY_WBS   .\output\SFR_DELIVERY_BY_WBS.out  # Budgets pertaining to water delivered via SFR; specified by WBS
+ #  PRINT SFR_DELIVERY          ./output/SFR_DELIVERY.out  # Budgets pertaining to water delivered via SFR; specified by NSFR_DELIV
+  # PRINT SFR_DELIVERY_BY_WBS   ./output/SFR_DELIVERY_BY_WBS.out  # Budgets pertaining to water delivered via SFR; specified by WBS
    #
-#   PRINT SFR_RETURN            .\output\SFR_RETURN.out  # Runoff budget for all SFR segment/reaches that receive FMP runoff
- #  PRINT SFR_SRR_ONLY          .\output\SFR_SRR_ONLY.out  # Runoff budget for the NSFR_RETURN SFR segment/reaches that receive FMP runoff
+#   PRINT SFR_RETURN            ./output/SFR_RETURN.out  # Runoff budget for all SFR segment/reaches that receive FMP runoff
+ #  PRINT SFR_SRR_ONLY          ./output/SFR_SRR_ONLY.out  # Runoff budget for the NSFR_RETURN SFR segment/reaches that receive FMP runoff
    #
    # ------------------------------------------------------------------------------------------------------------------
    #
@@ -1085,19 +1085,19 @@ BEGIN SURFACE_WATER
    #
    # Each record reads: ISRD, WBS_ID, SEGMENT, REACH, [FRAC]
    #
-   #   Where ISRD is the SRD record ID, WBS_ID is the WBS that has access to the delivery, 
+   #   Where ISRD is the SRD record ID, WBS_ID is the WBS that has access to the delivery,
    #         and SEGMENT, REACH are location in SFR that the WBS can remove water
    #   A name defined in SFR_NAMES may be used in the place of SEGMENT, REACH
    #
    #    **IF WBS_ID is set to zero, then the ISRD is ignored and SEGMENT and REACH are not read.
    #         This is how you can specify less delivery points then NSFR_DELIV
    #
-   #   FRAC is optional and if specified indicates an initial fraction 
-   #     of the irrigation demand that is suppled by the SRD. 
-   #     If the SRD can not supply that amount of water, then the 
+   #   FRAC is optional and if specified indicates an initial fraction
+   #     of the irrigation demand that is suppled by the SRD.
+   #     If the SRD can not supply that amount of water, then the
    #     deficit demand is shifted to other defined SRD's.
-   #        
-   #        ***If FRAC is NOT specified (or specified as -1), 
+   #
+   #        ***If FRAC is NOT specified (or specified as -1),
    #           then water is removed from the SRD in the order they are specified.
    #
    #     For Example with NSFR_DELIV = 5, the following defines the delivery location for WBS 5 and 6:
@@ -1112,7 +1112,7 @@ BEGIN SURFACE_WATER
    #         If either SRD can not meet the requested demand then the deficit is shifted to the other.
    #
    #SEMI_ROUTED_DELIVERY LAI[S,T,L-3]
-   SEMI_ROUTED_DELIVERY STATIC OPEN/CLOSE FMP_update/sv_sfr_diversion_points.in
+   SEMI_ROUTED_DELIVERY STATIC OPEN/CLOSE ./fmp_update/sv_sfr_diversion_points.in
    #
    #
    # By default the SEMI_ROUTED_DELIVERY removes all the water available from the specified SFR Segment/Reach.
@@ -1121,24 +1121,24 @@ BEGIN SURFACE_WATER
    #  Only flow that is greater then the lower limit is available to the WBS.
    # The upper limit, SEMI_ROUTED_DELIVERY_UPPER_LIMIT, is the maximum flow that a WBS can remove.
    #  Only flow that is beneath this limit is available to the WBS.
-   #  
+   #
    # If both the lower and upper limits are applied then the available water is their difference.
    #
-   # For Example, note all numbers have units L^3/T, 
+   # For Example, note all numbers have units L^3/T,
    #
    #  A Lower Limit of 10 and upper limit of 50 would allow not allow a WBS more then 40 because 50 - 10 = 40
-   #  
-   #      If the flow in SFR is <10, then no water is available to the WBS 
-   #  
+   #
+   #      If the flow in SFR is <10, then no water is available to the WBS
+   #
    #      If the flow in SFR is between 10 and 50, then the water is available to the WBS is the FLOW - 10
    #                --For example the flow is 30, then the available flow is 20 because 30 - 10 = 20
-   #  
+   #
    #      If the flow in SFR is >50, then the water is available to the WBS is 40 because 50 - 10 = 40
-   #  
+   #
    #    *** Note that the ALLOTMENT block imposes an additional limit on the total surface water supply to each WBS.
-   # 
+   #
    #   Both the Lower and Upper Limits use List-Style that read NSFR_DELIV records.
-   #   
+   #
    #    *** If SEMI_ROUTED_DELIVERY_LOWER_LIMIT is NOT specified, it is set to 0.0    --No lower limit
    #    *** If SEMI_ROUTED_DELIVERY_UPPER_LIMIT is NOT specified, it is set to 1E100  --No upper limit
    #
@@ -1150,7 +1150,7 @@ BEGIN SURFACE_WATER
    # The keyword SEMI_ROUTED_DELIVERY_CLOSURE_TOLERANCE defines a tolerance for how much a delivery rate
    # can change between solver iterations before convergence is allowed.
    # If not specified, then the default tolerance is 0.02 L^3/T change in delivery.
-   #   This indicates that--in addition to the solver criteria--convergence is only allowed 
+   #   This indicates that--in addition to the solver criteria--convergence is only allowed
    #   if the the change in SEMI_ROUTED_DELIVERY from the previous iteration is less then 0.02 L^3/T
    #
    #SEMI_ROUTED_DELIVERY_CLOSURE_TOLERANCE  FLOAT
@@ -1162,17 +1162,17 @@ BEGIN SURFACE_WATER
    # WBS Runoff has four options for how is it is applied. (Note they are listed in order of priority)
    #   1) Require all runoff to re-infiltrate as deep percolation. (NORETURNFLOW)
    #   2) Specify the SFR segments/reaches that receive runoff, or define runoff to leave model (SEMI_ROUTED_RETURN)
-   #   3) Prorate runoff across all SFR reaches within a WBS. If no SFR reaches are found then 
+   #   3) Prorate runoff across all SFR reaches within a WBS. If no SFR reaches are found then
    #   4) If a WBS does not have anywhere to apply runoff then it leaves the model domain and a warning is raised.
-   #  
+   #
    # If WBS is defined with multiple runoff options, then the previous order determines which one is selected.
    #   For example NORETURN flow is chosen over SEMI_ROUTED_RETURN if both are specified.
    #
-   # 1) NO_RETURN_FLOW indicates that surface runoff re-infiltrates as deep percolation. 
-   #     
+   # 1) NO_RETURN_FLOW indicates that surface runoff re-infiltrates as deep percolation.
+   #
    #     LAI[S,T,L] is optional. If not specified then all WBS have NO_RETURN_FLOW.
    #     if included then specify NWBS records that have either
-   #        a  1 to indicate the WBS has NO_RETURN_FLOW/No runoff 
+   #        a  1 to indicate the WBS has NO_RETURN_FLOW/No runoff
    #        or 0 to indicate that it does have return flow and Options 2, 3, and 4 decide the runoff location
    #
    #NO_RETURN_FLOW  [ LAI[S,T,L] ]
@@ -1185,13 +1185,13 @@ BEGIN SURFACE_WATER
    #    Where ISRR is the SRR record ID, WBS_ID is the WBS,
    #          and SEGMENT, REACH are location in SFR that the WBS runoff flows to
    #    A name defined in SFR_NAMES may be used in the place of SEGMENT, REACH
-   #    **IF WBS_ID is greater then zero and SEGMENT is set to zero, then 
+   #    **IF WBS_ID is greater then zero and SEGMENT is set to zero, then
    #         that WBS has its runoff removed from the model domain--same as Option 4, but without the warning.
    #
    #    **IF WBS_ID  is set to zero, then the ISRR is ignored and SEGMENT and REACH are not read.
    #    **If SEGMENT is set to zero, then runoff for that WBS removed from model (flows out of simulation domain)
    #    **IF REACH   is set to zero, then the specified SEGMENT has runoff applied to all of its reaches.
-   #    
+   #
    #   FRAC is optional and if specified is the fraction of surface runoff that is applied the ISRR for a WBS.
    #        ***If FRAC is specified for a WBS, then all ISRR's that include that WBS must include a fraction and the the FRACtions should sum to 1.
    #
@@ -1208,14 +1208,14 @@ BEGIN SURFACE_WATER
    #          6     6     17        0          # WBS 6 includes all reaches from SEG 15, length prorates along with SEG 16, RCH 2
    #
    #SEMI_ROUTED_RETURN LAI[S,T,L-3]
-   SEMI_ROUTED_RETURN STATIC OPEN/CLOSE FMP_update/sv_sfr_diversion_return_points_new_farms.in
+   SEMI_ROUTED_RETURN STATIC OPEN/CLOSE ./fmp_update/sv_sfr_diversion_return_points_new_farms.in
    #
    #
    # 3) FULLY ROUTED RETURN indicates that a WBS will search for any SFR reaches
    #    that are within the WBS. It will then length prorate the runoff to those reaches
    #    If one of the following keywords is present then FMP will initiate the search for SFR segments/reaches
    #    for any WBS that does not have a 1 for NO_RETURN_FLOW or defined with a SEMI_ROUTED_RETURN
-   #        ***Note only one of two keywords may be present. They differ in telling FMP 
+   #        ***Note only one of two keywords may be present. They differ in telling FMP
    #           if diversion segments should be included in the search.
    #
    #ROUTED_RETURN_ANY_NON_DIVERSION_REACH  # WBS return flow (runoff) goes to all non-diversion SEGMENT/REACH located in WBS
@@ -1227,7 +1227,7 @@ BEGIN SURFACE_WATER
    #   This saves computation time, since the fully routed network return locations should not change.
    # If SFR is configured such that the SFR network is changing by stress period, then there is a chance
    #   that the fully routed network can be incorrect (for example a segment appears in a WBS that was not originally there)
-   # 
+   #
    # The keyword REBUILD_FULLY_ROUTED_RETURN forces FMP to rebuild the FULLY ROUTED RETURN network at the start of every stress period.
    #   This slows the simulation runtime down and should only be enabled when SFR has segment/reaches moving (not inflow but its physical location)
    #
@@ -1238,9 +1238,9 @@ BEGIN SURFACE_WATER
 END
 #
 #
-BEGIN SUPPLY_WELL 
+BEGIN SUPPLY_WELL
    #
-   # Optional block, but if specified then only 
+   # Optional block, but if specified then only
    #                 {TIME FRAME, LINEFEED WBS, LINEFEED CAPACITY} is required, which specifies the Supply Wells
    #                 The rest of the keywords provide output files, or modify the defined Supply Wells
    #
@@ -1250,7 +1250,7 @@ BEGIN SUPPLY_WELL
    #    The following keywords result in an output file that contains information about the SUPPLY_WELLs
    #
   # PRINT BYWELL      output/wells.out   # Summary Supply Well output for each active well
-   PRINT ByWBS       output/pump_by_farms.out   # Summary Supply Well output by WBS
+   #PRINT ByWBS       output/pump_by_farms.out   # Summary Supply Well output by WBS
    #PRINT ByMNW       GENERIC_OUTPUT_OptKey   # Summary Supply Well output for or MNW2-Linked Wells
    #PRINT LIST                                # Echo supply well results to LIST file (not recommended)
    #PRINT INPUT       GENERIC_OUTPUT_OptKey   # Echo supply well input to LIST file
@@ -1261,23 +1261,23 @@ BEGIN SUPPLY_WELL
    # Global Keywords (optional)
    #
    #  QMAXRESET  (default, even when not specified)
-   #        Indicates that MNW2 linked wells should have their 
+   #        Indicates that MNW2 linked wells should have their
    #        max capacities reset every time step instead of every stress period
-   #           --Note that MNW2 updates the maximum capacity every solver iteration 
+   #           --Note that MNW2 updates the maximum capacity every solver iteration
    #             to represent the potential production of the well
    #       Keyword can be specified by WBS, where a 1 indicates it is enabled for WBS, and 0 is disabled.
    #
    #  NO_QMAXRESET  (disables QMAXRESET)
    #
      # NOCIRNOQ
-   #        Indicates wells will only provide groundwater 
-   #        if the above surface demand is greater than zero 
+   #        Indicates wells will only provide groundwater
+   #        if the above surface demand is greater than zero
    #        That is: Zero demand for surface model cell above
    #                 => Zero Pumping for wells beneath surface cell
    #           --This is best for virtual wells that only supply water to the land surface they are underneath
    #
    # QMAXRESET and NOCIRNOQ may be a single word to apply to all farms
-   # or have the additional keyword ByWBS to use ULOAD to read NWBS 0 or 1s to indicate 
+   # or have the additional keyword ByWBS to use ULOAD to read NWBS 0 or 1s to indicate
    # which farms have the option (using 1 for having it)
    #
    #  For example for NWBS=4: QMAXRESET ByWBS  1 0 1 1
@@ -1289,7 +1289,7 @@ BEGIN SUPPLY_WELL
    #
    # SMOOTHING allows reduction of NON-MWN2 linked wells when the water table approaches the bottom of the model cell
    #    ByThick    specifies minimum thickness in model units   before smoothing occurs
-   #    ByFraction specifies minimum fraction of cell thickness before smoothing occurs  
+   #    ByFraction specifies minimum fraction of cell thickness before smoothing occurs
    #
    #                           ByThick =  ByFrac*(Top_Cell - Bot_Cell)
    #
@@ -1330,14 +1330,14 @@ BEGIN SUPPLY_WELL
    #
    # MNW_PUMP_SPREAD applies to only FMP-MNW2 Linked wells.
    #   It determines what MNW nodes to assign desired (demanded) pumpage too.
-   #   It should have no effect on the final/converged solution, 
+   #   It should have no effect on the final/converged solution,
    #      but it may improve convergence speed and thus reduce simulation time.
    #   The following are the three methods that the pumpage can initially be spread:
    #      0 BY_COND      -- spreads pumpage based on each nodes conductance (Default when not specified)
    #      1 BY_COUNT     -- spreads pumpage based on the node count (average rate per node)
    #      2 BY_TOP       -- assigns the total pumpage to the upper most node (original FMP3 method)
-   #        ByWBS ULOAD  -- uses ULOAD to read NWBS INT, which must be 0, 1, or 2. 
-   #                        --Based on the value will cause the associated farm to follow one of the 
+   #        ByWBS ULOAD  -- uses ULOAD to read NWBS INT, which must be 0, 1, or 2.
+   #                        --Based on the value will cause the associated farm to follow one of the
    #                          previously mentioned keywords (note the number to the left of each keyword)
    #
    #MNW_PUMP_SPREAD {BY_COND, BY_COUNT, BY_TOP, ByWBS ULOAD}
@@ -1362,8 +1362,8 @@ BEGIN SUPPLY_WELL
    # Optional Qcapacity Scale FACTOR
    #
    # Scale factor to apply to to well capacities
-   # ULOAD is a Float, that can be an implied internal, or LIST input with keyword. 
-   #     Expects to read one scale factor, but if ByWBS is used, then NWBS scale factors are read 
+   # ULOAD is a Float, that can be an implied internal, or LIST input with keyword.
+   #     Expects to read one scale factor, but if ByWBS is used, then NWBS scale factors are read
    #     and applied by farm association.
    #
    #SFAC [ByWBS] ULOAD
@@ -1377,11 +1377,11 @@ BEGIN SUPPLY_WELL
    #
    #  All well input a minimum contains:
    #    Well_Name =>  Is a character string to identify the well (20 character max)
-   #                     If supply well is linked to MNW2, then the name must be the 
+   #                     If supply well is linked to MNW2, then the name must be the
    #                     same as the MNW2 WELLID it is linked to
    #    WBS_ID    =>  The WBS that the well provides supply to
    #    LAY       =>  Is the layer that the supply well pumps from.
-   #                     If set to 0 or "MNW", then Well_Name points to 
+   #                     If set to 0 or "MNW", then Well_Name points to
    #                     the MNW2 WELLID that does the actual pumping
    #    ROW       =>  Row    location of supply well (not used if LAY = MNW)
    #    COL       =>  Column location of supply well (not used if LAY = MNW)
@@ -1396,36 +1396,36 @@ BEGIN SUPPLY_WELL
    #{TIME FRAME, LINEFEED WBS, LINEFEED CAPACITY}
    TIME RANGE
    #OPEN/CLOSE DATA_FMP/WELLS.in
-   OPEN/CLOSE FMP_update\allcropsfarms_on_06262024.in
+   OPEN/CLOSE ./fmp_update/allcropsfarms_on_06262024.in
    #
    #  WELL_INPUT =>
-   # 
+   #
    #  TIME FRAME (recommended option):
    #   Either specify input on subsequent lines as:
    #
-   #       Well_Name WBS_ID LAY ROW COL QCapacity Date_Start Date_End  
+   #       Well_Name WBS_ID LAY ROW COL QCapacity Date_Start Date_End
    #
-   #           --Date_Start/Date_End can either be a stress period number or calendar data: 
+   #           --Date_Start/Date_End can either be a stress period number or calendar data:
    #               mm/dd/yyyy, yyyy-mm-dd, or mm/yyyy
    #   or
    #    GENERIC_INPUT, one per line, of file that contain on each row:
    #                                 Well_Name WBS_ID LAY ROW COL QCapacity Date_Start Date_End
-   # 
+   #
    #  LINEFEED WBS:
    #   On subsequent lines specify as many GENERIC_INPUT_OptKey FeedFiles
    #
    #   Each FeedFile static information specifies:
-   #                                 Well_Name LAY ROW COL QCapacity 
-   #   and Temporal Input is the WBS/FARM ID as an INT. 
+   #                                 Well_Name LAY ROW COL QCapacity
+   #   and Temporal Input is the WBS/FARM ID as an INT.
    #                                 0 or NaN indicates well is not in use for Stress Period
-   # 
+   #
    #  LINEFEED CAPACITY:
    #   On subsequent lines specify a WBS/FARM ID followed by a GENERIC_INPUT_OptKey FeedFile
    #   The WBS ID indicates what WBS the FeedFile provides wells to
    #
    #   Each FeedFile static information specifies:
-   #                                 Well_Name LAY ROW COL 
-   #   and Temporal Input is the QCapacity as an Float. 
+   #                                 Well_Name LAY ROW COL
+   #   and Temporal Input is the QCapacity as an Float.
    #                                 NaN indicates well is not in use for Stress Period
    #
 END SUPPLY_WELL
@@ -1449,7 +1449,7 @@ END SUPPLY_WELL
    #
    #
    # Groundwater allotments for limiting total groundwater pumpage
-   #  
+   #
    #GROUNDWATER    {HEIGHT,VOLUME,RATE}  LAI[S,T,L]
    #
 #END ALLOTMENT
@@ -1459,7 +1459,7 @@ BEGIN LAND_USE
    #
    # Optional Block
    #
-   # The land use block specifies the properties of each land use 
+   # The land use block specifies the properties of each land use
    #  and location in the model grid
    #
    #  The input may either expect at most one land use per surface model cell
@@ -1467,10 +1467,10 @@ BEGIN LAND_USE
    #
    # ------------------------------------------------------------------------------------------------------------------
    #
-   #  The keywords 
+   #  The keywords
    #     SINGLE_LAND_USE_PER_CELL   is the default option if not specified,
    #                                allowing for at most one land use per model cell
-   #     MULTIPLE_LAND_USE_PER_CELL is used to indicate that simulation should 
+   #     MULTIPLE_LAND_USE_PER_CELL is used to indicate that simulation should
    #                                allow for multiple land use types per model cell
    #
    # The Land_Use block has all LIST style read NCROP records
@@ -1488,17 +1488,17 @@ BEGIN LAND_USE
    #  CANNOT specify LOCATION with MULTIPLE_LAND_USE_PER_CELL
    #
    #LOCATION LAI[S,T,A]
-   LOCATION TRANSIENT OPEN/CLOSE fmp_driver\crops_driver.txt
+   LOCATION TRANSIENT OPEN/CLOSE ./fmp_driver/crops_driver.txt
    #
    # If MULTIPLE_LAND_USE_PER_CELL then it is required to specify LAND_USE_AREA_FRACTION
    #  which indicates the portion of each model cell that each crop uses/its area.
    #  If SINGLE_LAND_USE_PER_CELL is specified then LAND_USE_AREA_FRACTION is optional an specifies
    #    the area that the land use covers for that specific surface cell and the rest is considered bare/fallow land
    #
-   #  MULTIPLE_LAND_USE_PER_CELL => NCROP*NROW by NCOL Float array with numbers from 0.0 to 1.0, 
-   #                                                         sum from all crops for a specific Row/Column 
+   #  MULTIPLE_LAND_USE_PER_CELL => NCROP*NROW by NCOL Float array with numbers from 0.0 to 1.0,
+   #                                                         sum from all crops for a specific Row/Column
    #                                                         can be at most 1.0, if less then 1.0 the remaining portion is assumed bare/fallowed land
-   #  SINGLE_LAND_USE_PER_CELL   =>       NROW by NCOL Float array with numbers from 0.0 to 1.0, 
+   #  SINGLE_LAND_USE_PER_CELL   =>       NROW by NCOL Float array with numbers from 0.0 to 1.0,
    #                                                         if fraction is less then 1.0 then the remaining portion is assumed bare/fallowed land
    #LAND_USE_AREA_FRACTION LAI[S,T,A,L]
    LAND_USE_AREA_FRACTION LIST INTERNAL #Rural and Urban area only have FMP calculate ET for 25% of area (Vegetated Area)
@@ -1523,12 +1523,12 @@ BEGIN LAND_USE
    #
    #PRINT BYWBS         GENERIC_OUTPUT_OptKey  # Summarize output by each WBS/Farm
    #PRINT BYWBS_BYCROP  GENERIC_OUTPUT_OptKey  # Summarize output by each WBS for each crop in WBS/Farm
-   PRINT BYWBS_BYCROP   .\Output\ByFarm_ByCrop.txt
-   PRINT BYCROP   .\Output\ByCrop.txt # Summarize output by each crop across entire model
+   #PRINT BYWBS_BYCROP   ./Output/ByFarm_ByCrop.txt
+   #PRINT BYCROP   ./Output/ByCrop.txt # Summarize output by each crop across entire model
    #PRINT BYCROP        GENERIC_OUTPUT_OptKey  # Summarize output by each crop across entire model
    #PRINT BARE          GENERIC_OUTPUT_OptKey  # Summarize output by any bare soil/fallow crops in model
    #PRINT ALL           GENERIC_OUTPUT_OptKey  # Summarize output of of every crop by model cell --includes additional info, such as head and root elevation
-   #PRINT ALL   .\Output\ALL_farm_details.txt # Summarize output by each crop across entire model
+   #PRINT ALL   ./Output/ALL_farm_details.txt # Summarize output by each crop across entire model
    #PRINT ALL_DETAIL    GENERIC_OUTPUT_OptKey  # Summarize output by of every crop by model cell --includes enormous amount of crop information from head to root pressures to crop fractions
    #PRINT INPUT         GENERIC_OUTPUT_OptKey  # Echo input loaded to file
    #
@@ -1545,7 +1545,7 @@ BEGIN LAND_USE
    #    If not specified then names are auto-generated as CROP_ID, with "ID" being the Crop ID
    #    ULOAD reads LIST input with CHAR names to the right of the record ID (ID, CHAR).
    #CROP_NAME    ULOAD
-   CROP_NAME OPEN/CLOSE FMP_update\crop_names.in
+   CROP_NAME OPEN/CLOSE ./fmp_update/crop_names.in
    #
    # ------------------------------------------------------------------------------------------------------------------
    #
@@ -1554,15 +1554,15 @@ BEGIN LAND_USE
    #
    # Potential Consumptive Use CU = CF + Kc*ETref
    #    If not specified then set to zero.
-   #    If CU = 0.0, then land is assumed to be bare/fallow, 
-   #    so all precipitation either becomes runoff or deep percolation 
+   #    If CU = 0.0, then land is assumed to be bare/fallow,
+   #    so all precipitation either becomes runoff or deep percolation
    #    and groundwater evaporation is determined from (in order of priority):
    #        1) If POTENTIAL_EVAPORATION_BARE is provided, it is used as the potential evaporation of groundwater underneath the bare soil
    #        2) If REFERENCE_ET               is provided, it is used as the potential evaporation of groundwater underneath the bare soil
    #        3) There is no groundwater evaporation
-   # 
+   #
    #CROP_COEFFICIENT  LAI[S,T,A,L]
-   CROP_COEFICIENT TRANSIENT LIST DATAFILE fmp_input\model_arrays\kc_GSP.txt
+   CROP_COEFICIENT TRANSIENT LIST DATAFILE ./fmp_input/model_arrays/kc_GSP.txt
    #
    #CONSUMPTIVE_USE  LAI[S,T,A,L]
    #
@@ -1574,19 +1574,19 @@ BEGIN LAND_USE
    #       and the irrigation efficiency (OFE)
    #
    #        =0 Indicates that it is not irrigated
-   #        >0 Indicates crop is irrigated and the number is the irrigation type 
+   #        >0 Indicates crop is irrigated and the number is the irrigation type
    #              The INT specified is the column in EFFICIENCY (WBS Block)
    #
    #IRRIGATION       LAI[S,T,A,L]
-   IRRIGATION TRANSIENT LIST DATAFILE FMP_update\irrigate.txt
+   IRRIGATION TRANSIENT LIST DATAFILE ./fmp_update/irrigate.txt
    #
    # ------------------------------------------------------------------------------------------------------------------
    #
-   # Crop root depth below land surface. 
+   # Crop root depth below land surface.
    #   Must be >0.0; NOT required or maybe zero if GROUNDWATER_ROOT_INTERACTION = 0 or 1
    #
    #ROOT_DEPTH       LAI[S,T,A,L]
-   ROOT_DEPTH STATIC LIST OPEN/CLOSE FMP_update/root_depth.in
+   ROOT_DEPTH STATIC LIST OPEN/CLOSE ./fmp_update/root_depth.in
    #
    #
    # ROOT_PRESSURE determines if, CONCEPT ONE, an empirical root pressure formulation is used (when specified)
@@ -1595,26 +1595,26 @@ BEGIN LAND_USE
    # If specified then SOIL block COEFFICIENT must be specified
    # If all pressures are specified as 0.0, then the root pressure calculation is not made and the linear uptake model is used for that crop
    #
-   ROOT_PRESSURE  STATIC LIST OPEN/CLOSE FMP_update\root_pressure.in
+   ROOT_PRESSURE  STATIC LIST OPEN/CLOSE ./fmp_update/root_pressure.in
    #
    #
    # Groundwater Root Interaction Flag, Specify as 0, 1 , 2, 3, 4, 5 (default is 5)
-   #     This determines if there is groundwater uptake to meet crop demand and 
+   #     This determines if there is groundwater uptake to meet crop demand and
    #     if the Potential Consumptive Use is reduced due to anoxia and soil stresses
-   # 
+   #
    # 0 = No Transpiration            ==> Zeros out any T requirement
    # 1 = No Groundwater Interaction  ==> No Root-Groundwater Uptake, No  Anoxia or Stress Reduction, Full CU must be met through surface sources (Precip or Irrigation)
    # 2 = Has Anoxia/Soil Stress Loss,                      NO Root-Groundwater Uptake ==> CU Reduced from any anoxia and soil stress, but CU may only be satisfied with surface sources
-   # 3 = Has Root-Groundwater Uptake,                      NO Anoxia/Soil Stress Loss ==> Anoxia and Soil Stress losses are either added to Root-Groundwater Uptake or surface consumption requirement  (i.e. if there is root-groundwater uptake, then the amount lost through anoxia is consumed as root-groundwater uptake. However if there is no root-groundwater uptake then the anoxia is added to the surface sources consumption (Precip or Irrigation) 
-   # 4 = Has Root-Groundwater Uptake and Soil Stress Loss, NO Anoxia Loss             ==> Anoxia                 losses are either added to Root-Groundwater Uptake or surface consumption requirement  (i.e. if there is root-groundwater uptake, then the amount lost through anoxia is consumed as root-groundwater uptake. However if there is no root-groundwater uptake then the anoxia is added to the surface sources consumption (Precip or Irrigation) 
+   # 3 = Has Root-Groundwater Uptake,                      NO Anoxia/Soil Stress Loss ==> Anoxia and Soil Stress losses are either added to Root-Groundwater Uptake or surface consumption requirement  (i.e. if there is root-groundwater uptake, then the amount lost through anoxia is consumed as root-groundwater uptake. However if there is no root-groundwater uptake then the anoxia is added to the surface sources consumption (Precip or Irrigation)
+   # 4 = Has Root-Groundwater Uptake and Soil Stress Loss, NO Anoxia Loss             ==> Anoxia                 losses are either added to Root-Groundwater Uptake or surface consumption requirement  (i.e. if there is root-groundwater uptake, then the amount lost through anoxia is consumed as root-groundwater uptake. However if there is no root-groundwater uptake then the anoxia is added to the surface sources consumption (Precip or Irrigation)
    # 5 = Full Interaction  ==> HAS Anoxia/Soil Stress Reduction, HAS Root-Groundwater Uptake  (DEFAULT)
    #
    #GROUNDWATER_ROOT_INTERACTION LAI[S,A,L]
-   GROUNDWATER_ROOT_INTERACTION LIST STATIC DATAFILE FMP_update\root_gw_interaction.in
+   GROUNDWATER_ROOT_INTERACTION LIST STATIC DATAFILE ./fmp_update/root_gw_interaction.in
    #
    # ------------------------------------------------------------------------------------------------------------------
    #
-   # TRANSPIRATION_FRACTION (FTR): 
+   # TRANSPIRATION_FRACTION (FTR):
    #     Fraction of consumptive use that is the potential transpiration of the crop
    #     Formally defined as FTR = Kcb/Kc = Basal Crop Coefficient / Crop Coefficient
    #     Can be viewed as the fraction of a unit cropped area covered by leaf matter, i.e. crop cover.
@@ -1622,7 +1622,7 @@ BEGIN LAND_USE
    #     If set to zero, then crop is assumed to be fallowed or its area is bare soil
    #
    #TRANSPIRATION_FRACTION    LAI[S,T,A,L]
-   TRANSPIRATION_FRACTION TRANSIENT LIST DATAFILE FMP_update\FTR.in
+   TRANSPIRATION_FRACTION TRANSIENT LIST DATAFILE ./fmp_update/FTR.in
    #
    #
    # EVAPORATION_IRRIGATION_FRACTION (FEI):
@@ -1630,51 +1630,51 @@ BEGIN LAND_USE
    #     It should be less than or equal to 1 - FTR  (That is FEI + FTR <= 1), but this is not required.
    #
    #     Can be viewed as the area that irrigated water is exposed to the sun and evaporates.
-   #     For example(for example on top of bare soil space between row crops. 
+   #     For example(for example on top of bare soil space between row crops.
    #
    #     If FEI + FTR > 1, then the final consumptive use can be larger
    #                       than the input specified due to evaporation.
-   #                       It can viewed as the water that evaporates before it 
+   #                       It can viewed as the water that evaporates before it
    #                       reaches the crop or evaporates while sitting atop of the leaves.
    #
-   #    By including the keyword EVAPORATION_IRRIGATION_FRACTION_SUM_ONE_CORRECTION 
+   #    By including the keyword EVAPORATION_IRRIGATION_FRACTION_SUM_ONE_CORRECTION
    #        forces FMP to correct FEI + FTR > 1 by setting FEI = 1 - FTR (Not Recommended)
    #
    #      Optionally, BY_CROP or BY_IRRIGATE may be specified after EVAPORATION_IRRIGATION_FRACTION
    #
-   #        EVAPORATION_IRRIGATION_FRACTION BY_CROP indicates that 
+   #        EVAPORATION_IRRIGATION_FRACTION BY_CROP indicates that
    #           List-Style input expects NCROP records and applies them by crop type
    #
-   #        EVAPORATION_IRRIGATION_FRACTION BY_IRRIGATE indicates that 
-   #           List-Style input expects NIRRIGATE records and applies them 
+   #        EVAPORATION_IRRIGATION_FRACTION BY_IRRIGATE indicates that
+   #           List-Style input expects NIRRIGATE records and applies them
    #           by each crop's irrigation type defined with the IRRIGATION keyword
    #
-   #        If BY_CROP or BY_IRRIGATE is not specified then the input assumes List-Style 
+   #        If BY_CROP or BY_IRRIGATE is not specified then the input assumes List-Style
    #           is NCROP records (same as specifying BY_CROP)
    #
    #       If FEI = -1, then it is recalculated as FEI = 1 - FTR
    #
    #EVAPORATION_IRRIGATION_FRACTION  [{BY_CROP, BY_IRRIGATE}]  LAI[S,T,A,L]
-   EVAPORATION_IRRIGATION_FRACTION TRANSIENT LIST DATAFILE FMP_update/FEI.in
+   EVAPORATION_IRRIGATION_FRACTION TRANSIENT LIST DATAFILE ./fmp_update/fei.in
    #
    #
    # Any precipitation not consumed by the crop either becomes an inefficient loss.
    #     The inefficient loss becomes either runoff or deep percolation.
    #
-   # SURFACEWATER_LOSS_FRACTION_PRECIPITATION indicates 
-   #     the fraction of inefficient losses from precipitation that 
-   #     goes to surface water compared to deep percolation. 
+   # SURFACEWATER_LOSS_FRACTION_PRECIPITATION indicates
+   #     the fraction of inefficient losses from precipitation that
+   #     goes to surface water compared to deep percolation.
    #     (e.g. 0.75 indicates 75% of unconsumed precip becomes surface runoff)
    #
    #SURFACEWATER_LOSS_FRACTION_PRECIPITATION LAI[S,T,A,L]
-   SURFACEWATER_LOSS_FRACTION_PRECIPITATION STATIC LIST OPEN/CLOSE FMP_update/fieswp.in
+   SURFACEWATER_LOSS_FRACTION_PRECIPITATION STATIC LIST OPEN/CLOSE ./fmp_update/fieswp.in
    #
    #
    # Inefficient losses from irrigation is the extra water required to meet an irrigation requirement
    # They are a result of the EFFICIENCY being less than 1
    #
    # SURFACEWATER_LOSS_FRACTION_IRRIGATION: indicates
-   #     the fraction of inefficient losses from irrigation that go 
+   #     the fraction of inefficient losses from irrigation that go
    #     to surface water compared to deep percolation.
    #     (e.g. 0.75 indicates 75% of extra irrigation becomes surface runoff)
    #
@@ -1684,14 +1684,14 @@ BEGIN LAND_USE
    #           then List-Style input expects NCROP records and applies them by crop type
    #
    #        If the keyword is SURFACEWATER_LOSS_FRACTION_IRRIGATION BY_IRRIGATE,
-   #           then List-Style input expects NIRRIGATE records and 
+   #           then List-Style input expects NIRRIGATE records and
    #           applies them by each crops irrigation type defined with the IRRIGATION keyword
    #
-   #        If BY_CROP or BY_IRRIGATE is not specified then the input assumes List-Style 
+   #        If BY_CROP or BY_IRRIGATE is not specified then the input assumes List-Style
    #           is NCROP records (same as specifying BY_CROP)
    #
    #SURFACEWATER_LOSS_FRACTION_IRRIGATION [{BY_CROP, BY_IRRIGATE}]   LAI[S,T,A,L]
-   SURFACEWATER_LOSS_FRACTION_IRRIGATION STATIC LIST OPEN/CLOSE FMP_update/fieswi.in
+   SURFACEWATER_LOSS_FRACTION_IRRIGATION STATIC LIST OPEN/CLOSE ./fmp_update/fieswi.in
    #
    # ------------------------------------------------------------------------------------------------------------------
    #
