@@ -1,16 +1,16 @@
-LIST 7 .\output\sv_model_grid_6layers.lst
-WARN 999 .\output\WARNING.txt
+#LIST 7 ./output/sv_model_grid_6layers.lst
+WARN 999 ./output/WARNING.txt
 BAS6  1 sv_init_heads.bas
 DIS  29 sv_model_grid_6layers_GSP.dis
 UPW 11 sv_pp_plus_zones.upw
 PVAL 20 sv_PVAL_rev_mtnfac.pval
 ZONE 21 sv_zones.zone
-MULT 23 sv_mult.MULT
+#MULT 23 sv_mult.MULT
 SFR 35 sv_GSP.sfr
 GAGE 38 sv_SFR_swgw_n_gauge_locs.gag
 WEL1 12 SV_GSP_rur2.wel
 GHB 17 sv_mtl_GSP.ghb   
-MNW2 13 .\fmp_input\mnw_folder\sv_fmp_deepend_1_only_GSP.mnw2
+MNW2 13 ./fmp_input/mnw_folder/sv_fmp_deepend_1_only_GSP.mnw2
 HFB6 26 sv_faults.hfb
 OC  22 sv_model_grid_6layers_GSP.oc
 NWT 19 sv_model_grid_6layers_BOYCE.nwt
@@ -23,38 +23,23 @@ HOB 2 SV_HOBS_11_18_2015.HOB
 HYD 3  SV_HOBS_coords_new.HYD
 
 # FMP Input data files
-DATA          41       .\fmp_input\model_arrays\sv_OFE_GSP.txt             
-DATA          42       .\fmp_input\model_arrays\kc_GSP.txt       
-DATA          43       .\fmp_input\model_arrays\update_svwwtp_only.txt
-DATA          48       .\fmp_input\model_arrays\FTR_Sonoma_GSP.txt
-DATA     	  69       	.\output\Reduced_wells.out
+DATA          41       ./fmp_input/model_arrays/sv_OFE_GSP.txt             
+DATA          42       ./fmp_input/model_arrays/kc_GSP.txt       
+DATA          43       ./fmp_input/model_arrays/update_svwwtp_only.txt
+DATA          48       ./fmp_input/model_arrays/FTR_Sonoma_GSP.txt
+DATA     	  69       	./output/Reduced_wells.out
 
-#TAB DATA FOR SFR
-data   151    .\TABFILES\update_sfr_seg_1.csv       #TAB FILE LOCATION     
-data   152    .\TABFILES\update_sfr_seg_3.csv       #TAB FILE LOCATION     
-data   153    .\TABFILES\update_sfr_seg_5.csv       #TAB FILE LOCATION     
-data   154    .\TABFILES\update_sfr_seg_6.csv       #TAB FILE LOCATION     
-data   155    .\TABFILES\update_sfr_seg_7.csv       #TAB FILE LOCATION     
-data   156    .\TABFILES\update_sfr_seg_9.csv       #TAB FILE LOCATION     
-data   157    .\TABFILES\update_sfr_seg_13.csv       #TAB FILE LOCATION     
-data   158    .\TABFILES\update_sfr_seg_14.csv       #TAB FILE LOCATION     
-data   159    .\TABFILES\update_sfr_seg_15.csv       #TAB FILE LOCATION     
-data   160    .\TABFILES\update_sfr_seg_16.csv       #TAB FILE LOCATION     
-data   161    .\TABFILES\update_sfr_seg_17.csv       #TAB FILE LOCATION     
-data   162    .\TABFILES\update_sfr_seg_18.csv       #TAB FILE LOCATION     
-data   163    .\TABFILES\update_sfr_seg_19.csv       #TAB FILE LOCATION     
-data   164    .\TABFILES\update_sfr_seg_20.csv       #TAB FILE LOCATION     
-data   165    .\TABFILES\update_sfr_seg_23.csv       #TAB FILE LOCATION     
+
 
 # output data
-DATA(BINARY) 50  .\output\sv_model_grid_6layers.cbb REPLACE
-DATA 37 .\output\sv_model_grid_6layers_gage_str.dat REPLACE
-DATA 101 .\output\kenwood_sfr.dat REPLACE
-DATA 102 .\output\agua_caliente_sfr.dat REPLACE
-DATA(BINARY) 122 .\output\UZFbudget.txt REPLACE
-DATA(BINARY) 30 .\output\sv_model_grid_6layers.hds REPLACE
-DATA(BINARY) 31 .\output\sv_model_grid_6layers.ddn REPLACE
-DATA          88       .\output\SV_HOBS_all._os 
-DATA(BINARY)  		  70       .\output\SV_hyd.hyd replace
-DATA  71 .\output\SV_sfr_sim.dat
+DATA(BINARY) 50  .output/sv_model_grid_6layers.cbb REPLACE
+DATA 37 ./output/sv_model_grid_6layers_gage_str.dat REPLACE
+DATA 101 ./output/kenwood_sfr.dat REPLACE
+DATA 102 ./output/agua_caliente_sfr.dat REPLACE
+DATA(BINARY) 122 ./output/UZFbudget.txt REPLACE
+DATA(BINARY) 30 ./output/sv_model_grid_6layers.hds REPLACE
+DATA(BINARY) 31 ./output/sv_model_grid_6layers.ddn REPLACE
+DATA          88       ./output/SV_HOBS_all._os 
+DATA(BINARY)  		  70       ./output/SV_hyd.hyd replace
+DATA  71 ./output/SV_sfr_sim.dat
 

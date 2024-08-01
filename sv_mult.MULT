@@ -1,34 +1,34 @@
 # Multiplier arrays for SV, 7 zones layer 1-4, 5 zones for layer 5-6
 16 	number of multiplier arrays
 lay1hk
-OPEN/CLOSE .\layer_percents_REDO\Hk_1.csv 0 (FREE) -1 Line 3: IZON: OPEN/CLOSE FNAME CNSTNT FMTIN IPRN
+OPEN/CLOSE ./layer_percents_REDO/Hk_1.csv 0 (FREE) -1 Line 3: IZON: OPEN/CLOSE FNAME CNSTNT FMTIN IPRN
 lay2hk                               
-OPEN/CLOSE .\layer_percents_REDO\Hk_3.csv 0 (FREE) -1 Line 3: IZON: OPEN/CLOSE FNAME CNSTNT FMTIN IPRN
+OPEN/CLOSE ./layer_percents_REDO/Hk_3.csv 0 (FREE) -1 Line 3: IZON: OPEN/CLOSE FNAME CNSTNT FMTIN IPRN
 lay4hk                               
-OPEN/CLOSE .\layer_percents_REDO\Hk_4.csv 0 (FREE) -1 Line 3: IZON: OPEN/CLOSE FNAME CNSTNT FMTIN IPRN
+OPEN/CLOSE ./layer_percents_REDO/Hk_4.csv 0 (FREE) -1 Line 3: IZON: OPEN/CLOSE FNAME CNSTNT FMTIN IPRN
 lay5hk                               
-OPEN/CLOSE .\layer_percents_REDO\Hk_5.csv 0 (FREE) -1 Line 3: IZON: OPEN/CLOSE FNAME CNSTNT FMTIN IPRN
+OPEN/CLOSE ./layer_percents_REDO/Hk_5.csv 0 (FREE) -1 Line 3: IZON: OPEN/CLOSE FNAME CNSTNT FMTIN IPRN
 lay6hk                               
-OPEN/CLOSE .\layer_percents_REDO\Hk_6.csv 0 (FREE) -1 Line 3: IZON: OPEN/CLOSE FNAME CNSTNT FMTIN IPRN
+OPEN/CLOSE ./layer_percents_REDO/Hk_6.csv 0 (FREE) -1 Line 3: IZON: OPEN/CLOSE FNAME CNSTNT FMTIN IPRN
 lay1vk                               
-OPEN/CLOSE .\layer_percents_REDO\Vk_1.csv 0 (FREE) -1 Line 3: IZON: OPEN/CLOSE FNAME CNSTNT FMTIN IPRN
+OPEN/CLOSE ./layer_percents_REDO/Vk_1.csv 0 (FREE) -1 Line 3: IZON: OPEN/CLOSE FNAME CNSTNT FMTIN IPRN
 lay2vk                               
-OPEN/CLOSE .\layer_percents_REDO\Vk_3.csv 0 (FREE) -1 Line 3: IZON: OPEN/CLOSE FNAME CNSTNT FMTIN IPRN
+OPEN/CLOSE ./layer_percents_REDO/Vk_3.csv 0 (FREE) -1 Line 3: IZON: OPEN/CLOSE FNAME CNSTNT FMTIN IPRN
 lay4vk                               
-OPEN/CLOSE .\layer_percents_REDO\Vk_4.csv 0 (FREE) -1 Line 3: IZON: OPEN/CLOSE FNAME CNSTNT FMTIN IPRN
+OPEN/CLOSE ./layer_percents_REDO/Vk_4.csv 0 (FREE) -1 Line 3: IZON: OPEN/CLOSE FNAME CNSTNT FMTIN IPRN
 lay5vk                               
-OPEN/CLOSE .\layer_percents_REDO\Vk_5.csv 0 (FREE) -1 Line 3: IZON: OPEN/CLOSE FNAME CNSTNT FMTIN IPRN
+OPEN/CLOSE ./layer_percents_REDO/Vk_5.csv 0 (FREE) -1 Line 3: IZON: OPEN/CLOSE FNAME CNSTNT FMTIN IPRN
 lay6vk                               
-OPEN/CLOSE .\layer_percents_REDO\Vk_6.csv 0 (FREE) -1 Line 3: IZON: OPEN/CLOSE FNAME CNSTNT FMTIN IPRN
+OPEN/CLOSE ./layer_percents_REDO/Vk_6.csv 0 (FREE) -1 Line 3: IZON: OPEN/CLOSE FNAME CNSTNT FMTIN IPRN
 lay1sy
-OPEN/CLOSE .\pp\ppout\ones.txt 0 (FREE) -1 Line 3: IZON: OPEN/CLOSE FNAME CNSTNT FMTIN IPRN
+OPEN/CLOSE ./pp/ppout/ones.txt 0 (FREE) -1 Line 3: IZON: OPEN/CLOSE FNAME CNSTNT FMTIN IPRN
 lay2ss
-OPEN/CLOSE .\pp\ppout\ones.txt 0 (FREE) -1 Line 3: IZON: OPEN/CLOSE FNAME CNSTNT FMTIN IPRN
+OPEN/CLOSE ./pp/ppout/ones.txt 0 (FREE) -1 Line 3: IZON: OPEN/CLOSE FNAME CNSTNT FMTIN IPRN
 lay4ss
-OPEN/CLOSE .\pp\ppout\ones.txt 0 (FREE) -1 Line 3: IZON: OPEN/CLOSE FNAME CNSTNT FMTIN IPRN
+OPEN/CLOSE ./pp/ppout/ones.txt 0 (FREE) -1 Line 3: IZON: OPEN/CLOSE FNAME CNSTNT FMTIN IPRN
 lay5ss
-OPEN/CLOSE .\pp\ppout\ones.txt 0 (FREE) -1 Line 3: IZON: OPEN/CLOSE FNAME CNSTNT FMTIN IPRN
+OPEN/CLOSE ./pp/ppout/ones.txt 0 (FREE) -1 Line 3: IZON: OPEN/CLOSE FNAME CNSTNT FMTIN IPRN
 lay6ss
-OPEN/CLOSE .\pp\ppout\ones.txt 0 (FREE) -1 Line 3: IZON: OPEN/CLOSE FNAME CNSTNT FMTIN IPRN
+OPEN/CLOSE ./pp/ppout/ones.txt 0 (FREE) -1 Line 3: IZON: OPEN/CLOSE FNAME CNSTNT FMTIN IPRN
 lay1ss
-OPEN/CLOSE .\pp\ppout\ones.txt 0 (FREE) -1 Line 3: IZON: OPEN/CLOSE FNAME CNSTNT FMTIN IPRN
+OPEN/CLOSE ./pp/ppout/ones.txt 0 (FREE) -1 Line 3: IZON: OPEN/CLOSE FNAME CNSTNT FMTIN IPRN
