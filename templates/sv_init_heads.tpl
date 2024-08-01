@@ -6608,9 +6608,9 @@ FREE SHOWPROGRESS CONVERGE MAXPARAM 2000 2000000 100000
   1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1
   1  1  1  1  1  1  1  1  1  1
  -999.000000
-OPEN/CLOSE .\init_heads\init_heads_lay1.dat @     starthead1       @   (FREE) 1 Line 3: IZON: OPEN/CLOSE FNAME CNSTNT FMTIN IPRN
-OPEN/CLOSE .\init_heads\init_heads_lay2.dat @     starthead2       @   (FREE)  1  Line 3: IZON: OPEN/CLOSE FNAME CNSTNT FMTIN IPRN
-OPEN/CLOSE .\init_heads\init_heads_lay3.dat @     starthead3       @   (FREE) 1 Line 3: IZON: OPEN/CLOSE FNAME CNSTNT FMTIN IPRN
-OPEN/CLOSE .\init_heads\init_heads_lay4.dat @     starthead4       @   (FREE) 1  Line 3: IZON: OPEN/CLOSE FNAME CNSTNT FMTIN IPRN
-OPEN/CLOSE .\init_heads\init_heads_lay5.dat @     starthead5       @   (FREE) 1  Line 3: IZON: OPEN/CLOSE FNAME CNSTNT FMTIN IPRN
-OPEN/CLOSE .\init_heads\init_heads_lay6.dat @     starthead6       @   (FREE) 1  Line 3: IZON: OPEN/CLOSE FNAME CNSTNT FMTIN IPRN
+OPEN/CLOSE ./init_heads/init_heads_lay1.dat @     starthead1       @   (FREE) 1 Line 3: IZON: OPEN/CLOSE FNAME CNSTNT FMTIN IPRN
+OPEN/CLOSE ./init_heads/init_heads_lay2.dat @     starthead2       @   (FREE)  1  Line 3: IZON: OPEN/CLOSE FNAME CNSTNT FMTIN IPRN
+OPEN/CLOSE ./init_heads/init_heads_lay3.dat @     starthead3       @   (FREE) 1 Line 3: IZON: OPEN/CLOSE FNAME CNSTNT FMTIN IPRN
+OPEN/CLOSE ./init_heads/init_heads_lay4.dat @     starthead4       @   (FREE) 1  Line 3: IZON: OPEN/CLOSE FNAME CNSTNT FMTIN IPRN
+OPEN/CLOSE ./init_heads/init_heads_lay5.dat @     starthead5       @   (FREE) 1  Line 3: IZON: OPEN/CLOSE FNAME CNSTNT FMTIN IPRN
+OPEN/CLOSE ./init_heads/init_heads_lay6.dat @     starthead6       @   (FREE) 1  Line 3: IZON: OPEN/CLOSE FNAME CNSTNT FMTIN IPRN
