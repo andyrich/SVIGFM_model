@@ -74,16 +74,16 @@ BEGIN OPTIONS
 #            # XSECTION  # Input is a cross section of col by lay
 END OPTIONS
 # FREE SHOWPROGRESS CONVERGE MAXPARAM 2000 2000000 100000
-OPEN/CLOSE .\model_arrays\ibound_1.txt            1.0000000E+00   (FREE) 1 Line 3: IZON: OPEN/CLOSE FNAME CNSTNT FMTIN IPRN
-OPEN/CLOSE .\model_arrays\ibound_2.txt            1.0000000E+00   (FREE) 1 Line 3: IZON: OPEN/CLOSE FNAME CNSTNT FMTIN IPRN
-OPEN/CLOSE .\model_arrays\ibound_3.txt            1.0000000E+00   (FREE) 1 Line 3: IZON: OPEN/CLOSE FNAME CNSTNT FMTIN IPRN
-OPEN/CLOSE .\model_arrays\ibound_4.txt            1.0000000E+00   (FREE) 1 Line 3: IZON: OPEN/CLOSE FNAME CNSTNT FMTIN IPRN
-OPEN/CLOSE .\model_arrays\ibound_5.txt            1.0000000E+00   (FREE) 1 Line 3: IZON: OPEN/CLOSE FNAME CNSTNT FMTIN IPRN
-OPEN/CLOSE .\model_arrays\ibound_6.txt            1.0000000E+00   (FREE) 1 Line 3: IZON: OPEN/CLOSE FNAME CNSTNT FMTIN IPRN
+OPEN/CLOSE ./model_arrays/ibound_1.txt            1.0000000E+00   (FREE) 1 Line 3: IZON: OPEN/CLOSE FNAME CNSTNT FMTIN IPRN
+OPEN/CLOSE ./model_arrays/ibound_2.txt            1.0000000E+00   (FREE) 1 Line 3: IZON: OPEN/CLOSE FNAME CNSTNT FMTIN IPRN
+OPEN/CLOSE ./model_arrays/ibound_3.txt            1.0000000E+00   (FREE) 1 Line 3: IZON: OPEN/CLOSE FNAME CNSTNT FMTIN IPRN
+OPEN/CLOSE ./model_arrays/ibound_4.txt            1.0000000E+00   (FREE) 1 Line 3: IZON: OPEN/CLOSE FNAME CNSTNT FMTIN IPRN
+OPEN/CLOSE ./model_arrays/ibound_5.txt            1.0000000E+00   (FREE) 1 Line 3: IZON: OPEN/CLOSE FNAME CNSTNT FMTIN IPRN
+OPEN/CLOSE ./model_arrays/ibound_6.txt            1.0000000E+00   (FREE) 1 Line 3: IZON: OPEN/CLOSE FNAME CNSTNT FMTIN IPRN
  -999.000000
-OPEN/CLOSE .\init_heads\init_heads_lay1.dat            1.0000000E+00   (FREE) 1 Line 3: IZON: OPEN/CLOSE FNAME CNSTNT FMTIN IPRN
-OPEN/CLOSE .\init_heads\init_heads_lay2.dat            1.0000000E+00   (FREE)  1  Line 3: IZON: OPEN/CLOSE FNAME CNSTNT FMTIN IPRN
-OPEN/CLOSE .\init_heads\init_heads_lay3.dat            1.0000000E+00   (FREE) 1 Line 3: IZON: OPEN/CLOSE FNAME CNSTNT FMTIN IPRN
-OPEN/CLOSE .\init_heads\init_heads_lay4.dat            1.0000000E+00   (FREE) 1  Line 3: IZON: OPEN/CLOSE FNAME CNSTNT FMTIN IPRN
-OPEN/CLOSE .\init_heads\init_heads_lay5.dat            1.0000000E+00   (FREE) 1  Line 3: IZON: OPEN/CLOSE FNAME CNSTNT FMTIN IPRN
-OPEN/CLOSE .\init_heads\init_heads_lay6.dat            1.0000000E+00   (FREE) 1  Line 3: IZON: OPEN/CLOSE FNAME CNSTNT FMTIN IPRN
+OPEN/CLOSE ./init_heads/init_heads_lay1.dat            1.0000000E+00   (FREE) 1 Line 3: IZON: OPEN/CLOSE FNAME CNSTNT FMTIN IPRN
+OPEN/CLOSE ./init_heads/init_heads_lay2.dat            1.0000000E+00   (FREE)  1  Line 3: IZON: OPEN/CLOSE FNAME CNSTNT FMTIN IPRN
+OPEN/CLOSE ./init_heads/init_heads_lay3.dat            1.0000000E+00   (FREE) 1 Line 3: IZON: OPEN/CLOSE FNAME CNSTNT FMTIN IPRN
+OPEN/CLOSE ./init_heads/init_heads_lay4.dat            1.0000000E+00   (FREE) 1  Line 3: IZON: OPEN/CLOSE FNAME CNSTNT FMTIN IPRN
+OPEN/CLOSE ./init_heads/init_heads_lay5.dat            1.0000000E+00   (FREE) 1  Line 3: IZON: OPEN/CLOSE FNAME CNSTNT FMTIN IPRN
+OPEN/CLOSE ./init_heads/init_heads_lay6.dat            1.0000000E+00   (FREE) 1  Line 3: IZON: OPEN/CLOSE FNAME CNSTNT FMTIN IPRN

@@ -1,0 +1,8 @@
+pest_file,model_file
+output\Budget_pest.txt.ins,output\Budget_pest.txt
+output\Budget_pest_summary.txt.ins,output\Budget_pest_summary.txt
+output\SV_HOBS_all._os.ins,output\SV_HOBS_all._os
+output\agua_caliente_sfr_reformat.csv.ins,output\agua_caliente_sfr_reformat.csv
+output\kenwood_sfr_reformat.csv.ins,output\kenwood_sfr_reformat.csv
+output\agua_caliente_sfr_reformat_log.csv.ins,output\agua_caliente_sfr_reformat_log.csv
+output\kenwood_sfr_reformat_log.csv.ins,output\kenwood_sfr_reformat_log.csv
