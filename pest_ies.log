@@ -1,0 +1,60 @@
+time,elapsed_seconds,message
+15:38:25,6.37e-05,PEST++ performance logger started
+15:38:25,0.0016364,starting to process control file
+15:38:25,0.22386,finished processing control file
+15:38:25,0.155135,starting basic model IO error checking
+15:38:25,0.124632,finished basic model IO error checking
+15:38:25,0.0257082,initializing
+15:38:25,0.0030368,using glm algorithm
+15:38:25,0.0003811,using REDSVD for truncated svd solve
+15:38:25,0.0004572,maxsing: 10000000
+15:38:25,0.0004021,eigthresh:  1e-06
+15:38:25,0.0003618,initializing localizer
+15:38:25,4.54e-05,loading localizer matrix from file spatial_loc.jcb
+15:38:26,0.387002,processing localizer matrix
+15:38:27,1.15449,using localized solution with 5874 sequential upgrade steps
+15:38:27,0.0003123,localizing by parameters
+15:38:27,0.0003023,using lambda multipliers: 
+15:38:27,0.000277,using lambda scaling factors: 
+15:38:27,0.000284,acceptable phi factor:  1.05
+15:38:27,0.0003035,lambda increase factor:  10
+15:38:27,0.0002892,lambda decrease factor:  0.75
+15:38:27,0.0003011,max run fail:  1
+15:38:27,0.0079996,initializing prior parameter covariance matrix
+15:38:27,4.06e-05,initializing parcov
+15:38:27,0.0105589,parcov loaded  from parameter bounds, using par_sigma_range 4
+15:38:27,0.0124155,initializing observation noise covariance matrix
+15:38:27,0.111407,obscov loaded  from observation weights
+15:38:27,0.0185033,using reg_factor:  0
+15:38:27,0.0003563,drawing parameter realizations:  150
+15:38:27,0.0283022,parameters not grouped by parameter groups, reordering par ensemble
+15:38:27,0.016678,making standard normal draws
+15:38:27,0.0237798,scaling by std
+15:38:27,0.0007587,checking realization for invalid values
+15:38:27,0.0067759,resizing reals matrix
+15:38:27,0.0028046,filling reals matrix and adding mean values
+15:38:27,0.0310266,not using prior parameter covariance matrix scaling
+15:38:27,0.0003343,drawing observation noise realizations:  150
+15:38:27,0.010104,observations not grouped by observation groups, reordering obs ensemble
+15:38:27,0.0162151,making standard normal draws
+15:38:27,0.0201728,scaling by std
+15:38:27,0.0005528,checking realization for invalid values
+15:38:27,0.0052918,resizing reals matrix
+15:38:27,0.0016667,filling reals matrix and adding mean values
+15:38:27,0.03534,setting weights ensemble from control file weights
+15:38:29,1.57216,saved weight ensemble to  pest_ies.weights.csv
+15:38:29,3.8e-05,checking for denormal values in weights ensemble
+15:38:29,0.0036619,adding 'base' parameter values to ensemble
+15:38:29,0.0157895,adding 'base' observation values to ensemble
+15:38:29,0.0138275,adding 'base' weight values to weight ensemble
+15:38:29,0.009063,checking for denormal values in pe
+15:38:30,1.08747,saved initial parameter ensemble to  pest_ies.0.par.csv
+15:38:30,3.63e-05,checking for denormal values in obs + noise ensemble
+15:38:33,2.4781,saved obs+noise observation ensemble (obsval + noise realizations) to  pest_ies.obs+noise.csv
+15:38:33,0.0004436,using subset in lambda testing, number of realizations used in subset testing:  4
+15:38:33,0.0004696,subset how:  RANDOM
+15:38:33,0.017633,centering on ensemble mean vector
+15:38:33,4.92e-05,running initial ensemble
+15:38:33,0.0003125,running initial ensemble of size 150
+15:38:33,5.01e-05,queuing 150 runs
+15:38:33,0.221119,making runs
