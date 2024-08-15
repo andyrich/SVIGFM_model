@@ -6,7 +6,7 @@ BEGIN OPTIONS
 #            #
 #            # FASTFORWARD STR STP  #Only run model for Stress Period (or Date) STR to STP. Specifying STP is optional (otherwise its set ot NPER)
 #            #
-            NOCBC
+#            NOCBC
 #            #CBC_LAST_TIMESTEP      #Overrides OC and writes CBC at the end of every Time Step
 #            #CBC_EVERY_TIMESTEP     #Overrides OC and writes CBC every Time Step
 #            #

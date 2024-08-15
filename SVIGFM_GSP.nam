@@ -1,4 +1,4 @@
-LIST 7 ./output/sv_model_grid_6layers.lst
+#LIST 7 ./output/sv_model_grid_6layers.lst
 WARN 999 ./output/WARNING.txt
 BAS6  1 sv_init_heads.bas
 DIS  29 sv_model_grid_6layers_GSP.dis
@@ -32,7 +32,7 @@ DATA     	  69       	./output/Reduced_wells.out
 
 
 # output data
-DATA(BINARY) 50  ./output/sv_model_grid_6layers.cbb REPLACE
+DATA(BINARY) 50  .output/sv_model_grid_6layers.cbb REPLACE
 DATA 37 ./output/sv_model_grid_6layers_gage_str.dat REPLACE
 DATA 101 ./output/kenwood_sfr.dat REPLACE
 DATA 102 ./output/agua_caliente_sfr.dat REPLACE
