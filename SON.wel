@@ -1,8 +1,12 @@
 #Well Package Input
 #
+BEGIN BUDGET_GROUP
+             RURWELLS
+             MNIWELLS
+END   BUDGET_GROUP
 BEGIN LINEFEED
-	./mni.txt
-	./rural_dom.txt
+	mni.txt
+	rural_dom.txt
 END
 BEGIN OPTIONS
 	WELL_CBC	50
