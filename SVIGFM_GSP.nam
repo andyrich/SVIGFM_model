@@ -20,7 +20,7 @@ RCH 200 SVIGFM_GSP.rch
 #FMP 28 FMP.fmp4
 FMP 28 SV_FMP_V2.fmp
 HOB 2 SV_HOBS_11_18_2015.HOB
-HYD 3  SV_HOBS_coords_new.HYD
+HYD 3  hyd.hyd     #all head measurement locations in shallow or deep but not other
 
 # FMP Input data files
 DATA          41       ./fmp_input/model_arrays/sv_OFE_GSP.txt             
@@ -32,7 +32,7 @@ DATA     	  69       	./output/Reduced_wells.out
 
 
 # output data
-DATA(BINARY) 50  .output/sv_model_grid_6layers.cbb REPLACE
+DATA(BINARY) 50  ./output/sv_model_grid_6layers.cbb REPLACE
 DATA 37 ./output/sv_model_grid_6layers_gage_str.dat REPLACE
 DATA 101 ./output/kenwood_sfr.dat REPLACE
 DATA 102 ./output/agua_caliente_sfr.dat REPLACE
