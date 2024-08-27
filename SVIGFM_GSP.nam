@@ -1,4 +1,4 @@
-#LIST 7 ./output/sv_model_grid_6layers.lst
+LIST 7 ./output/sv_model_grid_6layers.lst
 WARN 999 ./output/WARNING.txt
 BAS6  1 sv_init_heads.bas
 DIS  29 sv_model_grid_6layers_GSP.dis
@@ -8,7 +8,7 @@ ZONE 21 sv_zones.zone
 #MULT 23 sv_mult.MULT
 SFR 35 sv_GSP.sfr
 GAGE 38 sv_SFR_swgw_n_gauge_locs.gag
-WEL1 12 SV_GSP_rur2.wel
+WEL 12 SON.wel
 GHB 17 sv_mtl_GSP.ghb   
 MNW2 13 ./fmp_input/mnw_folder/sv_fmp_deepend_1_only_GSP.mnw2
 HFB6 26 sv_faults.hfb
