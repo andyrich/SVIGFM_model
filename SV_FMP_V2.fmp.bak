@@ -633,26 +633,26 @@ BEGIN OUTPUT
    # If not present then output not created
    #
    FARM_WELL_CBC           50                          #IFWLCB -- INT IS THE CBC UNIT TO WRITE TO, Set to zero if not specified
-   FARM_NET_RECHARGE_CBC   50                          #IFNRCB -- INT IS THE CBC UNIT TO WRITE TO, Set to zero if not specified
+   #FARM_NET_RECHARGE_CBC   50                          #IFNRCB -- INT IS THE CBC UNIT TO WRITE TO, Set to zero if not specified
    #
    # The following will either use a predefined name (specified at comment)
    #   or write file to GENERIC_OUTPUT location/name
    #
-   WBS_WATER_USE                        ./output/FMP_WBS_WATER_USE.txt
-   FARM_DEMAND_SUPPLY_SUMMARY           ./output/FDS.out
-   FARM_BUDGET                           ./output/FB_DETAILS.OUT   # WRITE FB_DETAILS.out
+   #WBS_WATER_USE                        ./output/FMP_WBS_WATER_USE.txt
+   #FARM_DEMAND_SUPPLY_SUMMARY           ./output/FDS.out
+   #FARM_BUDGET                           ./output/FB_DETAILS.OUT   # WRITE FB_DETAILS.out
    #FARM_BUDGET_COMPACT                  [GENERIC_OUTPUT_OptKey]    # WRITE FB_COMPACT.out
    #FARM_NET_RECHARGE_ARRAY              [GENERIC_OUTPUT_OptKey]    # WRITE FNRCH_ARRAY.out
    #FARM_NET_RECHARGE_LIST               [GENERIC_OUTPUT_OptKey]    # WRITE FNRCH_LIST.out
    #EVAPOTRANSPIRATION_SUMMARY SUM       [GENERIC_OUTPUT_OptKey]    # WRITE ET_ARRAY.out     --KEY MAY BE "ET_ARRAY SUM"
    #EVAPOTRANSPIRATION_SUMMARY SEPARATE  [GENERIC_OUTPUT_OptKey]    # WRITE E_n_T_ARRAY.out  --KEY MAY BE "ET_ARRAY SEPARATE"
-   ET_LIST                              ./output/ET_LIST.out
-   FARM_WELL_SUMMARY                    ./output/FWELLS.out
+ #  ET_LIST                              ./output/ET_LIST.out
+ #  FARM_WELL_SUMMARY                    ./output/FWELLS.out
    #
    # Output 2D Array for the following.
    # If COMPACT is present then writes only nonzero values along with their row and column
-   LANDSCAPE_RUNOFF             		./output/RUNOFF.OUT      # [GENERIC_OUTPUT_OptKey]    # WRITE RUNOFF.OUT
-   DEEP_PERCOLATION    			 		./output/DPERC.OUT #--WATER THAT IS SENT TO GROUNDWATER OR UZF
+  # LANDSCAPE_RUNOFF             		./output/RUNOFF.OUT      # [GENERIC_OUTPUT_OptKey]    # WRITE RUNOFF.OUT
+ #  DEEP_PERCOLATION    			 		./output/DPERC.OUT #--WATER THAT IS SENT TO GROUNDWATER OR UZF
    #
    # LANDSCAPE CELL BY CELL OUTPUTS --Currently not supported
    ###GROUNDWATER_EVAPORATION              [GENERIC_OUTPUT_OptKey]    # WRITE EGWA.OUT
@@ -1072,11 +1072,11 @@ BEGIN SURFACE_WATER
    #    The following keywords result in an output file that contains information about
    #    either the semi-routed delivery amounts or runoff that returns to SFR
    #
-   PRINT SFR_DELIVERY          ./output/SFR_DELIVERY.out  # Budgets pertaining to water delivered via SFR; specified by NSFR_DELIV
-   PRINT SFR_DELIVERY_BY_WBS   ./output/SFR_DELIVERY_BY_WBS.out  # Budgets pertaining to water delivered via SFR; specified by WBS
+ #  PRINT SFR_DELIVERY          ./output/SFR_DELIVERY.out  # Budgets pertaining to water delivered via SFR; specified by NSFR_DELIV
+  # PRINT SFR_DELIVERY_BY_WBS   ./output/SFR_DELIVERY_BY_WBS.out  # Budgets pertaining to water delivered via SFR; specified by WBS
    #
-   PRINT SFR_RETURN            ./output/SFR_RETURN.out  # Runoff budget for all SFR segment/reaches that receive FMP runoff
-   PRINT SFR_SRR_ONLY          ./output/SFR_SRR_ONLY.out  # Runoff budget for the NSFR_RETURN SFR segment/reaches that receive FMP runoff
+#   PRINT SFR_RETURN            ./output/SFR_RETURN.out  # Runoff budget for all SFR segment/reaches that receive FMP runoff
+ #  PRINT SFR_SRR_ONLY          ./output/SFR_SRR_ONLY.out  # Runoff budget for the NSFR_RETURN SFR segment/reaches that receive FMP runoff
    #
    # ------------------------------------------------------------------------------------------------------------------
    #
@@ -1249,8 +1249,8 @@ BEGIN SUPPLY_WELL
    # OUTPUT OPTIONS (optional)
    #    The following keywords result in an output file that contains information about the SUPPLY_WELLs
    #
-   PRINT BYWELL      output/wells.out   # Summary Supply Well output for each active well
-   PRINT ByWBS       output/pump_by_farms.out   # Summary Supply Well output by WBS
+  # PRINT BYWELL      output/wells.out   # Summary Supply Well output for each active well
+   #PRINT ByWBS       output/pump_by_farms.out   # Summary Supply Well output by WBS
    #PRINT ByMNW       GENERIC_OUTPUT_OptKey   # Summary Supply Well output for or MNW2-Linked Wells
    #PRINT LIST                                # Echo supply well results to LIST file (not recommended)
    #PRINT INPUT       GENERIC_OUTPUT_OptKey   # Echo supply well input to LIST file
@@ -1523,12 +1523,12 @@ BEGIN LAND_USE
    #
    #PRINT BYWBS         GENERIC_OUTPUT_OptKey  # Summarize output by each WBS/Farm
    #PRINT BYWBS_BYCROP  GENERIC_OUTPUT_OptKey  # Summarize output by each WBS for each crop in WBS/Farm
-   PRINT BYWBS_BYCROP   ./Output/ByFarm_ByCrop.txt
-   PRINT BYCROP   ./Output/ByCrop.txt # Summarize output by each crop across entire model
+   #PRINT BYWBS_BYCROP   ./Output/ByFarm_ByCrop.txt
+   #PRINT BYCROP   ./Output/ByCrop.txt # Summarize output by each crop across entire model
    #PRINT BYCROP        GENERIC_OUTPUT_OptKey  # Summarize output by each crop across entire model
    #PRINT BARE          GENERIC_OUTPUT_OptKey  # Summarize output by any bare soil/fallow crops in model
    #PRINT ALL           GENERIC_OUTPUT_OptKey  # Summarize output of of every crop by model cell --includes additional info, such as head and root elevation
-   PRINT ALL   ./Output/ALL_farm_details.txt # Summarize output by each crop across entire model
+   #PRINT ALL   ./Output/ALL_farm_details.txt # Summarize output by each crop across entire model
    #PRINT ALL_DETAIL    GENERIC_OUTPUT_OptKey  # Summarize output by of every crop by model cell --includes enormous amount of crop information from head to root pressures to crop fractions
    #PRINT INPUT         GENERIC_OUTPUT_OptKey  # Echo input loaded to file
    #
