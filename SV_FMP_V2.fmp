@@ -1528,7 +1528,7 @@ BEGIN LAND_USE
    #PRINT BYCROP        GENERIC_OUTPUT_OptKey  # Summarize output by each crop across entire model
    #PRINT BARE          GENERIC_OUTPUT_OptKey  # Summarize output by any bare soil/fallow crops in model
    #PRINT ALL           GENERIC_OUTPUT_OptKey  # Summarize output of of every crop by model cell --includes additional info, such as head and root elevation
-   PRINT ALL   ./Output/ALL_farm_details.txt # Summarize output by each crop across entire model
+  # PRINT ALL   ./Output/ALL_farm_details.txt # Summarize output by each crop across entire model
    #PRINT ALL_DETAIL    GENERIC_OUTPUT_OptKey  # Summarize output by of every crop by model cell --includes enormous amount of crop information from head to root pressures to crop fractions
    #PRINT INPUT         GENERIC_OUTPUT_OptKey  # Echo input loaded to file
    #
@@ -1562,7 +1562,7 @@ BEGIN LAND_USE
    #        3) There is no groundwater evaporation
    #
    #CROP_COEFFICIENT  LAI[S,T,A,L]
-   CROP_COEFICIENT TRANSIENT LIST DATAFILE ./fmp_input/model_arrays/kc_GSP.txt
+   CROP_COEFICIENT TRANSIENT LIST DATAFILE ./fmp_input/model_arrays/kc_GSP_PEST.txt
    #
    #CONSUMPTIVE_USE  LAI[S,T,A,L]
    #

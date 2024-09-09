@@ -3,7 +3,7 @@ WARN 999 ./output/WARNING.txt
 BAS6  1 sv_init_heads.bas
 DIS  29 sv_model_grid_6layers_GSP.dis
 UPW 11 sv_pp_plus_zones.upw
-PVAL 20 sv_PVAL_rev_mtnfac.pval
+PVAL 20 pval.pval
 ZONE 21 sv_zones.zone
 #MULT 23 sv_mult.MULT
 SFR 35 sv_GSP.sfr
