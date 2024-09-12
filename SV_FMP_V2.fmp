@@ -638,21 +638,21 @@ BEGIN OUTPUT
    # The following will either use a predefined name (specified at comment)
    #   or write file to GENERIC_OUTPUT location/name
    #
-   WBS_WATER_USE                        ./output/FMP_WBS_WATER_USE.txt
-   FARM_DEMAND_SUPPLY_SUMMARY           ./output/FDS.out
-   FARM_BUDGET                           ./output/FB_DETAILS.OUT   # WRITE FB_DETAILS.out
+   #WBS_WATER_USE                        ./output/FMP_WBS_WATER_USE.txt
+   #FARM_DEMAND_SUPPLY_SUMMARY           ./output/FDS.out
+   #FARM_BUDGET                           ./output/FB_DETAILS.OUT   # WRITE FB_DETAILS.out
    #FARM_BUDGET_COMPACT                  [GENERIC_OUTPUT_OptKey]    # WRITE FB_COMPACT.out
    #FARM_NET_RECHARGE_ARRAY              [GENERIC_OUTPUT_OptKey]    # WRITE FNRCH_ARRAY.out
    #FARM_NET_RECHARGE_LIST               [GENERIC_OUTPUT_OptKey]    # WRITE FNRCH_LIST.out
    #EVAPOTRANSPIRATION_SUMMARY SUM       [GENERIC_OUTPUT_OptKey]    # WRITE ET_ARRAY.out     --KEY MAY BE "ET_ARRAY SUM"
    #EVAPOTRANSPIRATION_SUMMARY SEPARATE  [GENERIC_OUTPUT_OptKey]    # WRITE E_n_T_ARRAY.out  --KEY MAY BE "ET_ARRAY SEPARATE"
-   ET_LIST                              ./output/ET_LIST.out
-   FARM_WELL_SUMMARY                    ./output/FWELLS.out
+   #ET_LIST                              ./output/ET_LIST.out
+   #FARM_WELL_SUMMARY                    ./output/FWELLS.out
    #
    # Output 2D Array for the following.
    # If COMPACT is present then writes only nonzero values along with their row and column
-   LANDSCAPE_RUNOFF             		./output/RUNOFF.OUT      # [GENERIC_OUTPUT_OptKey]    # WRITE RUNOFF.OUT
-   DEEP_PERCOLATION    			 		./output/DPERC.OUT #--WATER THAT IS SENT TO GROUNDWATER OR UZF
+   #LANDSCAPE_RUNOFF             		./output/RUNOFF.OUT      # [GENERIC_OUTPUT_OptKey]    # WRITE RUNOFF.OUT
+   #DEEP_PERCOLATION    			 		./output/DPERC.OUT #--WATER THAT IS SENT TO GROUNDWATER OR UZF
    #
    # LANDSCAPE CELL BY CELL OUTPUTS --Currently not supported
    ###GROUNDWATER_EVAPORATION              [GENERIC_OUTPUT_OptKey]    # WRITE EGWA.OUT
@@ -1249,8 +1249,8 @@ BEGIN SUPPLY_WELL
    # OUTPUT OPTIONS (optional)
    #    The following keywords result in an output file that contains information about the SUPPLY_WELLs
    #
-   PRINT BYWELL      output/wells.out   # Summary Supply Well output for each active well
-   PRINT ByWBS       output/pump_by_farms.out   # Summary Supply Well output by WBS
+   #PRINT BYWELL      output/wells.out   # Summary Supply Well output for each active well
+   #PRINT ByWBS       output/pump_by_farms.out   # Summary Supply Well output by WBS
    #PRINT ByMNW       GENERIC_OUTPUT_OptKey   # Summary Supply Well output for or MNW2-Linked Wells
    #PRINT LIST                                # Echo supply well results to LIST file (not recommended)
    #PRINT INPUT       GENERIC_OUTPUT_OptKey   # Echo supply well input to LIST file
