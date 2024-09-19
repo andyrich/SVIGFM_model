@@ -1,5 +1,4 @@
 ptf ~
 1
-ghbk                  ~                 ghbk         ~
+ghbk                  ~                 ghbk         ~           
 rurfac                ~                 rurfac         ~
-
