@@ -33,7 +33,7 @@ BEGIN OPTIONS
 #            #
 #            NO_DIM_CHECK         # BY PASS MIN SIZE CHECK
 #            DEALLOCATE_MULT      # Reduce Memory Footprint
-            MAXPARAM 2000 2000000 100000   # MAXPAR MAXCLUSTER MAXINSTANCE
+            MAXPARAM 20 200 100   # MAXPAR MAXCLUSTER MAXINSTANCE
 #            MAXBUDGET  MxBd      # Limits the size of the volumetric budgets, default is MxBd = 100. Should be at least the number of packages plus 10
 #            #
             BUDGETDB                        ./output/Budget.txt
