@@ -1072,11 +1072,11 @@ BEGIN SURFACE_WATER
    #    The following keywords result in an output file that contains information about
    #    either the semi-routed delivery amounts or runoff that returns to SFR
    #
-   PRINT SFR_DELIVERY          ./output/SFR_DELIVERY.out  # Budgets pertaining to water delivered via SFR; specified by NSFR_DELIV
-   PRINT SFR_DELIVERY_BY_WBS   ./output/SFR_DELIVERY_BY_WBS.out  # Budgets pertaining to water delivered via SFR; specified by WBS
+   #PRINT SFR_DELIVERY          ./output/SFR_DELIVERY.out  # Budgets pertaining to water delivered via SFR; specified by NSFR_DELIV
+   #PRINT SFR_DELIVERY_BY_WBS   ./output/SFR_DELIVERY_BY_WBS.out  # Budgets pertaining to water delivered via SFR; specified by WBS
    #
-   PRINT SFR_RETURN            ./output/SFR_RETURN.out  # Runoff budget for all SFR segment/reaches that receive FMP runoff
-   PRINT SFR_SRR_ONLY          ./output/SFR_SRR_ONLY.out  # Runoff budget for the NSFR_RETURN SFR segment/reaches that receive FMP runoff
+   #PRINT SFR_RETURN            ./output/SFR_RETURN.out  # Runoff budget for all SFR segment/reaches that receive FMP runoff
+   #PRINT SFR_SRR_ONLY          ./output/SFR_SRR_ONLY.out  # Runoff budget for the NSFR_RETURN SFR segment/reaches that receive FMP runoff
    #
    # ------------------------------------------------------------------------------------------------------------------
    #
