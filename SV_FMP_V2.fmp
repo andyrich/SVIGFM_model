@@ -1219,7 +1219,7 @@ BEGIN SURFACE_WATER
    #           if diversion segments should be included in the search.
    #
    #ROUTED_RETURN_ANY_NON_DIVERSION_REACH  # WBS return flow (runoff) goes to all non-diversion SEGMENT/REACH located in WBS
-   #ROUTED_RETURN_ANY_REACH                # WBS return flow (runoff) goes to all               SEGMENT/REACH located in WBS
+   ROUTED_RETURN_ANY_REACH                # WBS return flow (runoff) goes to all               SEGMENT/REACH located in WBS
    #
    # ------------------------------------------------------------------------------------------------------------------
    #
