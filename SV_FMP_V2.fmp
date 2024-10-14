@@ -1562,7 +1562,7 @@ BEGIN LAND_USE
    #        3) There is no groundwater evaporation
    #
    #CROP_COEFFICIENT  LAI[S,T,A,L]
-   CROP_COEFICIENT TRANSIENT LIST DATAFILE ./fmp_input/model_arrays/kc_GSP_PEST.txt
+   CROP_COEFFICIENT TRANSIENT LIST DATAFILE ./fmp_input/model_arrays/kc_GSP_PEST.txt
    #
    #CONSUMPTIVE_USE  LAI[S,T,A,L]
    #
